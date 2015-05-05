@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_iw_zvezdahotels_Hotel" modelAttribute="hotel" path="/hotels" versionField="Version" z="ypUBON6VC/ru29C1nCGVcjUtmxk=">
+        <field:input field="hName" id="c_iw_zvezdahotels_Hotel_hName" required="true" z="jV0fG38jZOEqqFYMtfFGcGqikrM="/>
+        <field:input field="hAddress" id="c_iw_zvezdahotels_Hotel_hAddress" required="true" z="RQrUXsRduvHE8vpQbLQw8DinPLo="/>
+        <field:input field="hTelephone" id="c_iw_zvezdahotels_Hotel_hTelephone" required="true" z="DIEsAyTNOUqni01/2FjF3Edy4e4="/>
+        <field:input field="hEmail" id="c_iw_zvezdahotels_Hotel_hEmail" z="CssJ+JXOiPXXWLiuMGsnPHqGTg0="/>
+        <field:input field="hWebsite" id="c_iw_zvezdahotels_Hotel_hWebsite" z="/HLErbgNmcnNQMIMHFGIJPbYsYA="/>
+        <field:input field="hStars" id="c_iw_zvezdahotels_Hotel_hStars" required="true" z="O2PwnWGGTegGE83fukzsimrn+5w="/>
+        <field:input field="hPricePerSingle" id="c_iw_zvezdahotels_Hotel_hPricePerSingle" required="true" z="nC72wJFi8morlKT2ybG4IBfDXHA="/>
+        <field:input field="hPricePerDouble" id="c_iw_zvezdahotels_Hotel_hPricePerDouble" required="true" z="EimwJNvD994ofiyoG5urD9kQg00="/>
+        <field:input field="hMaxStayingDays" id="c_iw_zvezdahotels_Hotel_hMaxStayingDays" required="true" z="232wMvjHKbueoqbBVFHsRTJp+Sc="/>
+        <field:simple field="hRooms" id="c_iw_zvezdahotels_Hotel_hRooms" messageCode="entity_reference_not_managed" messageCodeAttribute="Room" z="Q7KRNM88qZbodQyPjpZWnaVQXDE="/>
+    </form:update>
+</div>

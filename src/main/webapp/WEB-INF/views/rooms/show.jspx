@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_iw_zvezdahotels_Room" object="${room}" path="/rooms" z="VIF3Lk1sjng3K88Mb6TLgQm/ZvI=">
+        <field:display field="RNumber" id="s_iw_zvezdahotels_Room_rNumber" object="${room}" z="MP8fT0xZigya5HFc11A9kI5i22A="/>
+        <field:display field="RType" id="s_iw_zvezdahotels_Room_rType" object="${room}" z="5+C+Su4erFYg3YYWv689NfQSYBs="/>
+        <field:display field="RState" id="s_iw_zvezdahotels_Room_rState" object="${room}" z="Hmttfmp5FFigDj1Nok7JVDZqous="/>
+        <field:display field="RCategory" id="s_iw_zvezdahotels_Room_rCategory" object="${room}" z="baT8ch4QsU3TNm5uGkBTXJLA7uY="/>
+        <field:display field="RHotel" id="s_iw_zvezdahotels_Room_rHotel" object="${room}" z="iwHt4nKHMWtJN1fwKIEZsD4mHUs="/>
+    </page:show>
+</div>

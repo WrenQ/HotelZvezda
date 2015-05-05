@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_iw_zvezdahotels_Room" items="${rooms}" z="tZ2oxGc8WhmYrdx0Rxzg8wqaEY0=">
+        <table:table data="${rooms}" id="l_iw_zvezdahotels_Room" path="/rooms" z="YWwn03hCtYkYNRbDB19s/sIKhCo=">
+            <table:column id="c_iw_zvezdahotels_Room_rNumber" property="RNumber" z="C4iVDTD/NBW2gp5/ivHgdOqLuHI="/>
+            <table:column id="c_iw_zvezdahotels_Room_rType" property="RType" z="rilLmK6k/E66nMV0HC3DokSl+qc="/>
+            <table:column id="c_iw_zvezdahotels_Room_rState" property="RState" z="HwJD/zwEIXVQ+Y9KXrHBIoNJ/pg="/>
+            <table:column id="c_iw_zvezdahotels_Room_rCategory" property="RCategory" z="2G8zlleXiT8NRPZPyQSiKOnCYXw="/>
+            <table:column id="c_iw_zvezdahotels_Room_rHotel" property="RHotel" z="U2126HZMTHIhd3rX/y+O/TZsqZg="/>
+        </table:table>
+    </page:list>
+</div>

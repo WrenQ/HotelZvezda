@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_iw_zvezdahotels_Category" modelAttribute="category" path="/categorys" versionField="Version" z="UcGxs4VicegIJr5s4EKueYFNXi0=">
+        <field:input field="cName" id="c_iw_zvezdahotels_Category_cName" required="true" z="4HonK+663dxVHeJr38wU6MdzqYY="/>
+        <field:input field="cDescription" id="c_iw_zvezdahotels_Category_cDescription" required="true" z="qHgQGWpRFAIewxYyMaKxAgVEs3s="/>
+        <field:input field="cPriceFactor" id="c_iw_zvezdahotels_Category_cPriceFactor" required="true" z="iaa048g5Qne532iFz9XEOLKJjOE="/>
+        <field:simple field="cRooms" id="c_iw_zvezdahotels_Category_cRooms" messageCode="entity_reference_not_managed" messageCodeAttribute="Room" z="VwHOjhwd8X7IUbUUOBU8oLdLi1k="/>
+    </form:update>
+</div>

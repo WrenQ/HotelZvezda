@@ -1,0 +1,86 @@
+// Spring Roo 1.3.1.RELEASE [rev f4f5256] log opened at 2015-05-05 20:42:39
+project --topLevelPackage iw.zvezdahotels --projectName HotelZvezda --java 6 --packaging WAR
+// Spring Roo 1.3.1.RELEASE [rev f4f5256] log closed at 2015-05-05 20:42:47
+// Spring Roo 1.3.1.RELEASE [rev f4f5256] log opened at 2015-05-05 20:42:49
+jpa setup --provider HIBERNATE --database MYSQL --username root --password admin --databaseName hotelzvezda
+entity jpa --class Category --testAutomatically
+field string --fieldName cName --notNull
+field string --fieldName cDescription --notNull
+field number --fieldName cPriceFactor --notNull --type double
+entity jpa --class Room --testAutomatically
+enum type --class ~.Room.RoomType 
+enum constant --name SINGLE
+enum constant --name DOBLE
+enum type --class ~.Room.RoomState
+enum constant --name AVAILABLE
+enum constant --name UNAVAILABLE
+enum constant --name BOOKED
+enum constant --name OCCUPIED
+// [failed] focus --class Room
+focus --class ~.Room
+field number --fieldName rNumber --notNull --type int
+field enum --fieldName rType --type ~.Room.RoomType
+field enum --fieldName rState --type ~.Room.RoomState
+// [failed] entity jpa --class Category --testAutomatically
+field reference --fieldName rCategory --notNull --type ~.Category
+focus --class ~.Category
+field set --fieldName cRooms --type ~.Room --mappedBy rCategory --cardinality ONE_TO_MANY --class ~.Category
+entity jpa --class Hotel --testAutomatically
+field string --fieldName hName --notNull
+field string --fieldName hAddress --notNull
+field string hTelephone --notNull
+field string --fieldName hEmail
+field string --fieldName hWebsite
+field number --fieldName hStars --notNull --type int
+field number --fieldName hPricePerSingle --notNull --type double
+field number --fieldName hPricePerDouble --notNull --type double
+field number --fieldName hMaxStayingDays --notNull --type int
+focus --class ~.Room
+field reference --fieldName rHotel --notNull --type ~.Hotel
+focus --class ~.Hotel
+field set --fieldName hRooms --type ~.Room --mappedBy rHotel --cardinality ONE_TO_MANY --class ~.Hotel
+entity jpa --class Usuario --testAutomatically
+field string uFullName --notNull
+field string uEmail --notNull
+field string --fieldName uUsername --notNull --sizeMin 6
+field string --fieldName uPassword --notNull --sizeMin 8
+field date --fieldName uDateRegistration --notNull  --type java.util.Date --dateTimeFormatPattern "dd-MM-yyyy hh:mm:ss" 
+entity jpa --class ~.Usuario.UserRole --testAutomatically
+field string --fieldName userRole --notNull
+focus --class ~.Usuario
+field reference --fieldName uRol --notNull --type ~.Usuario.UserRole
+entity jpa --class Booking --testAutomatically
+field number --fieldName bCode --notNull --type int
+field boolean --fieldName bWithExtraBed --notNull
+field date --fieldName bDateBooking --notNull  --type java.util.Date --dateTimeFormatPattern "dd-MM-yyyy hh:mm:ss"
+field date --fieldName bDateCheckIn  --type java.util.Date --dateTimeFormatPattern "dd-MM-yyyy hh:mm:ss"
+field date --fieldName bDateCheckOut  --type java.util.Date --dateTimeFormatPattern "dd-MM-yyyy hh:mm:ss"
+field string --fieldName bCreditCard --notNull --sizeMin 16 --sizeMax 16
+field number --fieldName bPartialBill --notNull --type double
+field reference --fieldName bUser --notNull --type ~.Usuario
+focus --class ~.Room
+focus --class ~.Booking
+field reference --fieldName bRoom --notNull --type ~.Room
+focus --class ~.Room
+field set --fieldName rBookings --type ~.Booking --mappedBy bRoom --cardinality ONE_TO_MANY --class ~.Room
+focus --class ~.Usuario
+field set --fieldName uBookings --type ~.Booking --mappedBy bUser --cardinality ONE_TO_MANY --class ~.Usuario
+focus --class ~.Booking
+finder list
+focus --class ~.Booking
+finder list
+finder add findBookingsByDateBookingBetween
+finder add findBookingsByBDateBookingBetween
+finder add findBookingsByBRoom
+focus --class ~.Room
+finder list
+finder add findRoomsByRCategory
+finder add findRoomsByRHotel
+finder add findRoomsByRState
+finder add findRoomsByRType
+json all --deepSerialize
+web mvc json setup
+web mvc json all --package ~.web
+web mvc setup
+web mvc all --package ~.web
+security setup

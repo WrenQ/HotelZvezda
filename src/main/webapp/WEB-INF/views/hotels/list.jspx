@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_iw_zvezdahotels_Hotel" items="${hotels}" z="M6nPOZAYEl0LrLRoK0PBLXaYLqI=">
+        <table:table data="${hotels}" id="l_iw_zvezdahotels_Hotel" path="/hotels" z="JxdL72ljCtCx3Jn1AE7uwasROqE=">
+            <table:column id="c_iw_zvezdahotels_Hotel_hName" property="HName" z="U2+v+xlQlUAI8AJi6W1ZbY+v/9s="/>
+            <table:column id="c_iw_zvezdahotels_Hotel_hAddress" property="HAddress" z="pPx0OZwXGNSH/ZK+uNjRhaTNmmk="/>
+            <table:column id="c_iw_zvezdahotels_Hotel_hTelephone" property="HTelephone" z="c+lnmKbq8f3mKqzXBlJWEw6ZNxs="/>
+            <table:column id="c_iw_zvezdahotels_Hotel_hEmail" property="HEmail" z="cR5jopSL+0934Oe8nkcQnB8hZac="/>
+            <table:column id="c_iw_zvezdahotels_Hotel_hWebsite" property="HWebsite" z="7iuXwhBVHcu5ULN9e0pW4ifYADI="/>
+            <table:column id="c_iw_zvezdahotels_Hotel_hStars" property="HStars" z="7z5eUzQ639TiV/DVyzf0DLcF9g8="/>
+        </table:table>
+    </page:list>
+</div>

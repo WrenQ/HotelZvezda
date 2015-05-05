@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_iw_zvezdahotels_Usuario" items="${usuarios}" z="MBqEVabJgRGV0YAu+Nv54/PFyHE=">
+        <table:table data="${usuarios}" id="l_iw_zvezdahotels_Usuario" path="/usuarios" z="QiQiKpTPynudaJvRTIjCPymejNM=">
+            <table:column id="c_iw_zvezdahotels_Usuario_uFullName" property="UFullName" z="MLC2d5NjQDnlynB4HaQQAqO69jk="/>
+            <table:column id="c_iw_zvezdahotels_Usuario_uEmail" property="UEmail" z="2b+bj90nDTdS90uNoSRBlsCrblE="/>
+            <table:column id="c_iw_zvezdahotels_Usuario_uUsername" property="UUsername" z="mKz4VVgdw329KZIDk08vyJQclww="/>
+            <table:column id="c_iw_zvezdahotels_Usuario_uPassword" property="UPassword" z="rFQq+JW0Jxnb/bxQhAcbGCQUb/s="/>
+            <table:column date="true" dateTimePattern="${usuario_udateregistration_date_format}" id="c_iw_zvezdahotels_Usuario_uDateRegistration" property="UDateRegistration" z="krxLikF7SIqHG3uK/ZxdjE2KZuA="/>
+            <table:column id="c_iw_zvezdahotels_Usuario_uRol" property="URol" z="NiwLG7IQHv1PP8rYkc5fBgUl6hY="/>
+        </table:table>
+    </page:list>
+</div>

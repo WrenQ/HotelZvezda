@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_iw_zvezdahotels_Usuario" modelAttribute="usuario" path="/usuarios" versionField="Version" z="hZvCKYOBr2xmyvGGIU8Q7x/RbDs=">
+        <field:input field="uFullName" id="c_iw_zvezdahotels_Usuario_uFullName" required="true" z="wgm1d3wHRNmjtPeCgY1fl2VlZu0="/>
+        <field:input field="uEmail" id="c_iw_zvezdahotels_Usuario_uEmail" required="true" z="BLX89/sv8MHmIZVtv1eG9Pz2L3U="/>
+        <field:input field="uUsername" id="c_iw_zvezdahotels_Usuario_uUsername" min="6" required="true" z="YII90c35vp07RgFJlh6ryLatr24="/>
+        <field:input field="uPassword" id="c_iw_zvezdahotels_Usuario_uPassword" min="8" required="true" z="2ti9Z0i/RCpGx7Z8MOnbiNec9UI="/>
+        <field:datetime dateTimePattern="${usuario_udateregistration_date_format}" field="uDateRegistration" id="c_iw_zvezdahotels_Usuario_uDateRegistration" required="true" z="fSeLZL5sg3j6pAycAh6Jd9wNdjI="/>
+        <field:select field="uRol" id="c_iw_zvezdahotels_Usuario_uRol" itemValue="id" items="${userroles}" path="/userroles" required="true" z="tOvdkYcy6WagAdbi/keZx8Gm2c0="/>
+        <field:simple field="uBookings" id="c_iw_zvezdahotels_Usuario_uBookings" messageCode="entity_reference_not_managed" messageCodeAttribute="Booking" z="3zFz0Ccus3LfqU/8+fPuPR9HMNk="/>
+    </form:update>
+</div>

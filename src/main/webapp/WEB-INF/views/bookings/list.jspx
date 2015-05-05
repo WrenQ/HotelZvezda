@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_iw_zvezdahotels_Booking" items="${bookings}" z="2+osnSTUiIvegy4oF4uaO6Srlqk=">
+        <table:table data="${bookings}" id="l_iw_zvezdahotels_Booking" path="/bookings" z="CqeB2AN+0JvArc+BxEZ7eBhLmcQ=">
+            <table:column id="c_iw_zvezdahotels_Booking_bCode" property="BCode" z="ye/l0RXJv0rPhWVahD54UIprAeE="/>
+            <table:column id="c_iw_zvezdahotels_Booking_bWithExtraBed" property="BWithExtraBed" z="YRPm4TCXyZCn8dyscuzXd31GVvo="/>
+            <table:column date="true" dateTimePattern="${booking_bdatebooking_date_format}" id="c_iw_zvezdahotels_Booking_bDateBooking" property="BDateBooking" z="bAmxqq5n22psdFbhJpcUZ0T28BI="/>
+            <table:column date="true" dateTimePattern="${booking_bdatecheckin_date_format}" id="c_iw_zvezdahotels_Booking_bDateCheckIn" property="BDateCheckIn" z="0lh87rkBqJ3Ot2RwvQy/v5SXVO4="/>
+            <table:column date="true" dateTimePattern="${booking_bdatecheckout_date_format}" id="c_iw_zvezdahotels_Booking_bDateCheckOut" property="BDateCheckOut" z="/c4wCwbPvGQ7JLLNGJwltyrQ05U="/>
+            <table:column id="c_iw_zvezdahotels_Booking_bCreditCard" property="BCreditCard" z="klEpXngnQI523F34hkbkVETESKg="/>
+        </table:table>
+    </page:list>
+</div>

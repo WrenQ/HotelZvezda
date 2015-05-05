@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_iw_zvezdahotels_Booking" modelAttribute="booking" path="/bookings" versionField="Version" z="yQx6Q50j+WeCfurHebZXydzrROM=">
+        <field:input field="bCode" id="c_iw_zvezdahotels_Booking_bCode" required="true" z="0+7pvvqwRpNAFICy+fsJW4gLwZg="/>
+        <field:checkbox field="bWithExtraBed" id="c_iw_zvezdahotels_Booking_bWithExtraBed" z="bcLGoCdQMUQUMCr3vWxJUDhC0zk="/>
+        <field:datetime dateTimePattern="${booking_bdatebooking_date_format}" field="bDateBooking" id="c_iw_zvezdahotels_Booking_bDateBooking" required="true" z="5E1BmCMjXZ5LdA8IfEHEucsHj7w="/>
+        <field:datetime dateTimePattern="${booking_bdatecheckin_date_format}" field="bDateCheckIn" id="c_iw_zvezdahotels_Booking_bDateCheckIn" z="nqRrYP/aRVggOYrafbVFyINHTKI="/>
+        <field:datetime dateTimePattern="${booking_bdatecheckout_date_format}" field="bDateCheckOut" id="c_iw_zvezdahotels_Booking_bDateCheckOut" z="4ZLQYta1tmMpHtpijqbGvCdu2Ks="/>
+        <field:input field="bCreditCard" id="c_iw_zvezdahotels_Booking_bCreditCard" max="16" min="16" required="true" z="dr6N6ugxDvZdQZjMHdqxhdmUaoE="/>
+        <field:input field="bPartialBill" id="c_iw_zvezdahotels_Booking_bPartialBill" required="true" z="pr27WNSi8yC8hYGImczmcp7odj8="/>
+        <field:select field="bUser" id="c_iw_zvezdahotels_Booking_bUser" itemValue="id" items="${usuarios}" path="/usuarios" required="true" z="DskAoIma/ajfaRmrLeyZ3FTTQ9I="/>
+        <field:select field="bRoom" id="c_iw_zvezdahotels_Booking_bRoom" itemValue="id" items="${rooms}" path="/rooms" required="true" z="C4kXfzcjFedwDF4KCCtxHpbS7Jo="/>
+    </form:update>
+</div>

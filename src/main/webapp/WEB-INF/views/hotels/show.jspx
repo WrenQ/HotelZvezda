@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_iw_zvezdahotels_Hotel" object="${hotel}" path="/hotels" z="ZyZrVCzOX3NGFUcM6osLp4t7FkE=">
+        <field:display field="HName" id="s_iw_zvezdahotels_Hotel_hName" object="${hotel}" z="w+5uMV3phcNAasTlfqqTPDz68zs="/>
+        <field:display field="HAddress" id="s_iw_zvezdahotels_Hotel_hAddress" object="${hotel}" z="9qtGJwFVQxatQ1UN+jKLZec24tY="/>
+        <field:display field="HTelephone" id="s_iw_zvezdahotels_Hotel_hTelephone" object="${hotel}" z="5cu4j0kFT703cSBqu2TpMg549ws="/>
+        <field:display field="HEmail" id="s_iw_zvezdahotels_Hotel_hEmail" object="${hotel}" z="4f7A+ZUrArUipdVG2Ss3sd07WkQ="/>
+        <field:display field="HWebsite" id="s_iw_zvezdahotels_Hotel_hWebsite" object="${hotel}" z="4ddi4AA6qiOn1/WwFzQIQu5PlvA="/>
+        <field:display field="HStars" id="s_iw_zvezdahotels_Hotel_hStars" object="${hotel}" z="+hwYip3PqAZp/uGSEq3VdZXDwIE="/>
+        <field:display field="HPricePerSingle" id="s_iw_zvezdahotels_Hotel_hPricePerSingle" object="${hotel}" z="qhbXvXehcTGpKd33iqH6rL9UzKQ="/>
+        <field:display field="HPricePerDouble" id="s_iw_zvezdahotels_Hotel_hPricePerDouble" object="${hotel}" z="n/UeX+KRyGOTLKbDHGPDet7pp7k="/>
+        <field:display field="HMaxStayingDays" id="s_iw_zvezdahotels_Hotel_hMaxStayingDays" object="${hotel}" z="AZqEh0x7lD6/cmASxWPa/MLbHOk="/>
+    </page:show>
+</div>
