@@ -29,6 +29,7 @@ privileged aspect HotelDataOnDemand_Roo_DataOnDemand {
         setHMaxStayingDays(obj, index);
         setHName(obj, index);
         setHPricePerDouble(obj, index);
+        setHPricePerExtraBed(obj, index);
         setHPricePerSingle(obj, index);
         setHStars(obj, index);
         setHTelephone(obj, index);
@@ -59,6 +60,11 @@ privileged aspect HotelDataOnDemand_Roo_DataOnDemand {
     public void HotelDataOnDemand.setHPricePerDouble(Hotel obj, int index) {
         double hPricePerDouble = new Integer(index).doubleValue();
         obj.setHPricePerDouble(hPricePerDouble);
+    }
+    
+    public void HotelDataOnDemand.setHPricePerExtraBed(Hotel obj, int index) {
+        double hPricePerExtraBed = new Integer(index).doubleValue();
+        obj.setHPricePerExtraBed(hPricePerExtraBed);
     }
     
     public void HotelDataOnDemand.setHPricePerSingle(Hotel obj, int index) {

@@ -12,5 +12,6 @@
         <field:display field="HPricePerSingle" id="s_iw_zvezdahotels_Hotel_hPricePerSingle" object="${hotel}" z="qhbXvXehcTGpKd33iqH6rL9UzKQ="/>
         <field:display field="HPricePerDouble" id="s_iw_zvezdahotels_Hotel_hPricePerDouble" object="${hotel}" z="n/UeX+KRyGOTLKbDHGPDet7pp7k="/>
         <field:display field="HMaxStayingDays" id="s_iw_zvezdahotels_Hotel_hMaxStayingDays" object="${hotel}" z="AZqEh0x7lD6/cmASxWPa/MLbHOk="/>
+        <field:display field="HPricePerExtraBed" id="s_iw_zvezdahotels_Hotel_hPricePerExtraBed" object="${hotel}" z="JX2Q++Q+8Jtb6G/V1CBNk2vcev0="/>
     </page:show>
 </div>

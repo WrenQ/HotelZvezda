@@ -12,5 +12,6 @@
         <field:input field="bPartialBill" id="c_iw_zvezdahotels_Booking_bPartialBill" required="true" z="pr27WNSi8yC8hYGImczmcp7odj8="/>
         <field:select field="bUser" id="c_iw_zvezdahotels_Booking_bUser" itemValue="id" items="${usuarios}" path="/usuarios" required="true" z="DskAoIma/ajfaRmrLeyZ3FTTQ9I="/>
         <field:select field="bRoom" id="c_iw_zvezdahotels_Booking_bRoom" itemValue="id" items="${rooms}" path="/rooms" required="true" z="C4kXfzcjFedwDF4KCCtxHpbS7Jo="/>
+        <field:input field="bDays" id="c_iw_zvezdahotels_Booking_bDays" required="true" z="Lb5PTHHIH2SoNjFxZSOqI7TOub0="/>
     </form:update>
 </div>

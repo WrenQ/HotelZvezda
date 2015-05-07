@@ -73,6 +73,14 @@ privileged aspect Hotel_Roo_JavaBean {
         this.hPricePerDouble = hPricePerDouble;
     }
     
+    public double Hotel.getHPricePerExtraBed() {
+        return this.hPricePerExtraBed;
+    }
+    
+    public void Hotel.setHPricePerExtraBed(double hPricePerExtraBed) {
+        this.hPricePerExtraBed = hPricePerExtraBed;
+    }
+    
     public int Hotel.getHMaxStayingDays() {
         return this.hMaxStayingDays;
     }

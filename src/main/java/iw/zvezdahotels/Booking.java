@@ -68,4 +68,9 @@ public class Booking {
     @NotNull
     @ManyToOne
     private Room bRoom;
+
+    /**
+     */
+    @NotNull
+    private long bDays;
 }

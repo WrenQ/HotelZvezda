@@ -14,7 +14,7 @@ privileged aspect Hotel_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Hotel.entityManager;
     
-    public static final List<String> Hotel.fieldNames4OrderClauseFilter = java.util.Arrays.asList("hName", "hAddress", "hTelephone", "hEmail", "hWebsite", "hStars", "hPricePerSingle", "hPricePerDouble", "hMaxStayingDays", "hRooms");
+    public static final List<String> Hotel.fieldNames4OrderClauseFilter = java.util.Arrays.asList("hName", "hAddress", "hTelephone", "hEmail", "hWebsite", "hStars", "hPricePerSingle", "hPricePerDouble", "hPricePerExtraBed", "hMaxStayingDays", "hRooms");
     
     public static final EntityManager Hotel.entityManager() {
         EntityManager em = new Hotel().entityManager;

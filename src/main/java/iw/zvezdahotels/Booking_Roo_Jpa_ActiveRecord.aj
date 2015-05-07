@@ -14,7 +14,7 @@ privileged aspect Booking_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Booking.entityManager;
     
-    public static final List<String> Booking.fieldNames4OrderClauseFilter = java.util.Arrays.asList("bCode", "bWithExtraBed", "bDateBooking", "bDateCheckIn", "bDateCheckOut", "bCreditCard", "bPartialBill", "bUser", "bRoom");
+    public static final List<String> Booking.fieldNames4OrderClauseFilter = java.util.Arrays.asList("bCode", "bWithExtraBed", "bDateBooking", "bDateCheckIn", "bDateCheckOut", "bCreditCard", "bPartialBill", "bUser", "bRoom", "bDays");
     
     public static final EntityManager Booking.entityManager() {
         EntityManager em = new Booking().entityManager;

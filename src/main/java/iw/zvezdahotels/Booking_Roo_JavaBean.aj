@@ -82,4 +82,12 @@ privileged aspect Booking_Roo_JavaBean {
         this.bRoom = bRoom;
     }
     
+    public long Booking.getBDays() {
+        return this.bDays;
+    }
+    
+    public void Booking.setBDays(long bDays) {
+        this.bDays = bDays;
+    }
+    
 }

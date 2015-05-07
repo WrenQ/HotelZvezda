@@ -12,5 +12,6 @@
         <field:display field="BPartialBill" id="s_iw_zvezdahotels_Booking_bPartialBill" object="${booking}" z="ZJsdjHGGd1yP7RWOx+np8S50dwc="/>
         <field:display field="BUser" id="s_iw_zvezdahotels_Booking_bUser" object="${booking}" z="bPIvWH/lfeH/cNbdRU93nvb/LUE="/>
         <field:display field="BRoom" id="s_iw_zvezdahotels_Booking_bRoom" object="${booking}" z="iq739/fPnSAil14UCqYL5nxceLA="/>
+        <field:display field="BDays" id="s_iw_zvezdahotels_Booking_bDays" object="${booking}" z="bT13O35yUfEAG60ZBHtSoWn7TMw="/>
     </page:show>
 </div>

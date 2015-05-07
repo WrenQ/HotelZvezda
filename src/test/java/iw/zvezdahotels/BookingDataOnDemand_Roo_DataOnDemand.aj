@@ -43,6 +43,7 @@ privileged aspect BookingDataOnDemand_Roo_DataOnDemand {
         setBDateBooking(obj, index);
         setBDateCheckIn(obj, index);
         setBDateCheckOut(obj, index);
+        setBDays(obj, index);
         setBPartialBill(obj, index);
         setBRoom(obj, index);
         setBUser(obj, index);
@@ -76,6 +77,11 @@ privileged aspect BookingDataOnDemand_Roo_DataOnDemand {
     public void BookingDataOnDemand.setBDateCheckOut(Booking obj, int index) {
         Date bDateCheckOut = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
         obj.setBDateCheckOut(bDateCheckOut);
+    }
+    
+    public void BookingDataOnDemand.setBDays(Booking obj, int index) {
+        Long bDays = new Integer(index).longValue();
+        obj.setBDays(bDays);
     }
     
     public void BookingDataOnDemand.setBPartialBill(Booking obj, int index) {

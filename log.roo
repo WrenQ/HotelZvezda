@@ -100,3 +100,8 @@ field boolean --fieldName uEnabled --notNull
 field set --fieldName uRoles --notNull --type ~.Usuario.UserRole
 focus --class ~.Usuario.UserRole
 field string --fieldName roleName --notNull
+focus --class ~.Booking
+field number --fieldName bDays --notNull --type int
+field number --fieldName bDays --notNull --type long
+focus --class ~.Hotel
+field number --fieldName hPricePerExtraBed --type double

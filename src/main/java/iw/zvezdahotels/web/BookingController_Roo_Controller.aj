@@ -23,17 +23,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect BookingController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String BookingController.create(@Valid Booking booking, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, booking);
-            return "bookings/create";
-        }
-        uiModel.asMap().clear();
-        booking.persist();
-        return "redirect:/bookings/" + encodeUrlPathSegment(booking.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", produces = "text/html")
     public String BookingController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Booking());

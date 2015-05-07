@@ -13,5 +13,6 @@
         <field:input field="hPricePerDouble" id="c_iw_zvezdahotels_Hotel_hPricePerDouble" required="true" z="EimwJNvD994ofiyoG5urD9kQg00="/>
         <field:input field="hMaxStayingDays" id="c_iw_zvezdahotels_Hotel_hMaxStayingDays" required="true" z="232wMvjHKbueoqbBVFHsRTJp+Sc="/>
         <field:simple field="hRooms" id="c_iw_zvezdahotels_Hotel_hRooms" messageCode="entity_reference_not_managed" messageCodeAttribute="Room" z="Q7KRNM88qZbodQyPjpZWnaVQXDE="/>
+        <field:input field="hPricePerExtraBed" id="c_iw_zvezdahotels_Hotel_hPricePerExtraBed" required="true" z="gSVU8S0jN8mdlxMj88t3IjkFsLs="/>
     </form:update>
 </div>
