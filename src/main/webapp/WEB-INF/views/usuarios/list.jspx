@@ -7,7 +7,7 @@
             <table:column id="c_iw_zvezdahotels_Usuario_uFullName" property="UFullName" z="MLC2d5NjQDnlynB4HaQQAqO69jk="/>
             <table:column id="c_iw_zvezdahotels_Usuario_uEmail" property="UEmail" z="2b+bj90nDTdS90uNoSRBlsCrblE="/>
             <table:column id="c_iw_zvezdahotels_Usuario_uUsername" property="UUsername" z="mKz4VVgdw329KZIDk08vyJQclww="/>
-            <table:column id="c_iw_zvezdahotels_Usuario_uPassword" property="UPassword" render = "false" z="rFQq+JW0Jxnb/bxQhAcbGCQUb/s="/>
+            <table:column id="c_iw_zvezdahotels_Usuario_uPassword" property="UPassword" render="false" z="user-managed"/>
             <table:column date="true" dateTimePattern="${usuario_udateregistration_date_format}" id="c_iw_zvezdahotels_Usuario_uDateRegistration" property="UDateRegistration" z="krxLikF7SIqHG3uK/ZxdjE2KZuA="/>
         </table:table>
     </page:list>

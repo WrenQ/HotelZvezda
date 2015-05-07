@@ -6,9 +6,9 @@
         <field:display field="UFullName" id="s_iw_zvezdahotels_Usuario_uFullName" object="${usuario}" z="zKhIur2oEAXyLL5itOSBoGQX5Ek="/>
         <field:display field="UEmail" id="s_iw_zvezdahotels_Usuario_uEmail" object="${usuario}" z="YO+Nt86TlDEyYFUwlDKABsRAbHk="/>
         <field:display field="UUsername" id="s_iw_zvezdahotels_Usuario_uUsername" object="${usuario}" z="N92Q3Ku7V/t0ITXYhUO08/cNIFw="/>
-        <field:display field="UPassword" id="s_iw_zvezdahotels_Usuario_uPassword" render = "false" object="${usuario}" z="yYKNcFptqRdDMyQwF+i/vNVA9Qo="/>
+        <field:display field="UPassword" id="s_iw_zvezdahotels_Usuario_uPassword" object="${usuario}" render="false" z="user-managed"/>
         <field:display date="true" dateTimePattern="${usuario_udateregistration_date_format}" field="UDateRegistration" id="s_iw_zvezdahotels_Usuario_uDateRegistration" object="${usuario}" z="00J3x4MKfnr9ySPV1RD0DjcXugQ="/>
-        <field:display field="UEnabled" id="s_iw_zvezdahotels_Usuario_uEnabled" render = "false" object="${usuario}" z="KPs1m4d+usYj4VivxrTnshHyUzA="/>
-        <field:display field="URoles" id="s_iw_zvezdahotels_Usuario_uRoles" render = "false" object="${usuario}" z="elTfQgihud6huZ1MiEuOt8O9GmI="/>
+        <field:display field="UEnabled" id="s_iw_zvezdahotels_Usuario_uEnabled" object="${usuario}" render="false" z="user-managed"/>
+        <field:display field="URoles" id="s_iw_zvezdahotels_Usuario_uRoles" object="${usuario}" render="false" z="user-managed"/>
     </page:show>
 </div>
