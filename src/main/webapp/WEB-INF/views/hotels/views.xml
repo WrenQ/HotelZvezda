@@ -13,4 +13,7 @@
 <definition extends="default" name="hotels/update">
         <put-attribute name="body" value="/WEB-INF/views/hotels/update.jspx"/>
     </definition>
+<definition extends="default" name="hotels?find=ByAvailableRooms">
+        <put-attribute name="body" value="/WEB-INF/views/hotels/findHotelsByAvailableRooms.jspx"/>
+    </definition>
 </tiles-definitions>
