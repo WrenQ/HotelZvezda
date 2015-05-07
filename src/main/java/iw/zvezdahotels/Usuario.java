@@ -15,11 +15,12 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.OneToMany;
 import org.springframework.roo.addon.json.RooJson;
+import javax.persistence.ManyToMany;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
 @RooJson(deepSerialize = true)
+@RooJpaActiveRecord(table = "usuario", finders = { "findUsuariosByUUsernameEquals" })
 public class Usuario {
 
     /**
@@ -53,12 +54,17 @@ public class Usuario {
 
     /**
      */
-    @NotNull
-    @ManyToOne
-    private UserRole uRol;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "bUser")
+    private Set<Booking> uBookings = new HashSet<Booking>();
 
     /**
      */
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "bUser")
-    private Set<Booking> uBookings = new HashSet<Booking>();
+    @NotNull
+    private Boolean uEnabled;
+
+    /**
+     */
+    @NotNull
+    @ManyToMany(cascade = CascadeType.ALL)
+    private Set<UserRole> uRoles = new HashSet<UserRole>();
 }

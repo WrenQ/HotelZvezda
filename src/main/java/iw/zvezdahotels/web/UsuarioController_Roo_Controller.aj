@@ -8,8 +8,6 @@ import iw.zvezdahotels.Usuario;
 import iw.zvezdahotels.usuario.UserRole;
 import iw.zvezdahotels.web.UsuarioController;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.ui.Model;
@@ -23,25 +21,9 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect UsuarioController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String UsuarioController.create(@Valid Usuario usuario, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, usuario);
-            return "usuarios/create";
-        }
-        uiModel.asMap().clear();
-        usuario.persist();
-        return "redirect:/usuarios/" + encodeUrlPathSegment(usuario.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", produces = "text/html")
     public String UsuarioController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Usuario());
-        List<String[]> dependencies = new ArrayList<String[]>();
-        if (UserRole.countUserRoles() == 0) {
-            dependencies.add(new String[] { "uRol", "userroles" });
-        }
-        uiModel.addAttribute("dependencies", dependencies);
         return "usuarios/create";
     }
     

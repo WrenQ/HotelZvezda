@@ -3,6 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_iw_zvezdahotels_usuario_UserRole" object="${userrole}" path="/userroles" z="7TAlb5Otua2RXFOwB6II2YPKRyU=">
-        <field:display field="userRole" id="s_iw_zvezdahotels_usuario_UserRole_userRole" object="${userrole}" z="g54HTp5HCmYI/3bXzsHa6VUUK5U="/>
+        <field:display field="roleName" id="s_iw_zvezdahotels_usuario_UserRole_roleName" object="${userrole}" z="U678rVudbIdiGhfL3MWAQ/lDPhk="/>
     </page:show>
 </div>

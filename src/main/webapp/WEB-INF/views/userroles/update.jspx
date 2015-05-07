@@ -3,6 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_iw_zvezdahotels_usuario_UserRole" modelAttribute="userRole" path="/userroles" versionField="Version" z="K986YBlomyNJEbWgPx+vVQIslPY=">
-        <field:input field="userRole" id="c_iw_zvezdahotels_usuario_UserRole_userRole" required="true" z="xX9ppVAiOApz7BglU5n/FZzuTM0="/>
+        <field:input field="roleName" id="c_iw_zvezdahotels_usuario_UserRole_roleName" required="true" z="OZYpkOeE5K06hXRKEdQYspAZKnk="/>
     </form:update>
 </div>

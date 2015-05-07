@@ -51,20 +51,28 @@ privileged aspect Usuario_Roo_JavaBean {
         this.uDateRegistration = uDateRegistration;
     }
     
-    public UserRole Usuario.getURol() {
-        return this.uRol;
-    }
-    
-    public void Usuario.setURol(UserRole uRol) {
-        this.uRol = uRol;
-    }
-    
     public Set<Booking> Usuario.getUBookings() {
         return this.uBookings;
     }
     
     public void Usuario.setUBookings(Set<Booking> uBookings) {
         this.uBookings = uBookings;
+    }
+    
+    public Boolean Usuario.getUEnabled() {
+        return this.uEnabled;
+    }
+    
+    public void Usuario.setUEnabled(Boolean uEnabled) {
+        this.uEnabled = uEnabled;
+    }
+    
+    public Set<UserRole> Usuario.getURoles() {
+        return this.uRoles;
+    }
+    
+    public void Usuario.setURoles(Set<UserRole> uRoles) {
+        this.uRoles = uRoles;
     }
     
 }

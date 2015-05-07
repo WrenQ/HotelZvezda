@@ -5,8 +5,6 @@ package iw.zvezdahotels;
 
 import iw.zvezdahotels.Usuario;
 import iw.zvezdahotels.UsuarioDataOnDemand;
-import iw.zvezdahotels.usuario.UserRole;
-import iw.zvezdahotels.usuario.UserRoleDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -17,7 +15,6 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect UsuarioDataOnDemand_Roo_DataOnDemand {
@@ -28,16 +25,13 @@ privileged aspect UsuarioDataOnDemand_Roo_DataOnDemand {
     
     private List<Usuario> UsuarioDataOnDemand.data;
     
-    @Autowired
-    UserRoleDataOnDemand UsuarioDataOnDemand.userRoleDataOnDemand;
-    
     public Usuario UsuarioDataOnDemand.getNewTransientUsuario(int index) {
         Usuario obj = new Usuario();
         setUDateRegistration(obj, index);
         setUEmail(obj, index);
+        setUEnabled(obj, index);
         setUFullName(obj, index);
         setUPassword(obj, index);
-        setURol(obj, index);
         setUUsername(obj, index);
         return obj;
     }
@@ -52,6 +46,11 @@ privileged aspect UsuarioDataOnDemand_Roo_DataOnDemand {
         obj.setUEmail(uEmail);
     }
     
+    public void UsuarioDataOnDemand.setUEnabled(Usuario obj, int index) {
+        Boolean uEnabled = Boolean.TRUE;
+        obj.setUEnabled(uEnabled);
+    }
+    
     public void UsuarioDataOnDemand.setUFullName(Usuario obj, int index) {
         String uFullName = "uFullName_" + index;
         obj.setUFullName(uFullName);
@@ -60,11 +59,6 @@ privileged aspect UsuarioDataOnDemand_Roo_DataOnDemand {
     public void UsuarioDataOnDemand.setUPassword(Usuario obj, int index) {
         String uPassword = "uPassword_" + index;
         obj.setUPassword(uPassword);
-    }
-    
-    public void UsuarioDataOnDemand.setURol(Usuario obj, int index) {
-        UserRole uRol = userRoleDataOnDemand.getRandomUserRole();
-        obj.setURol(uRol);
     }
     
     public void UsuarioDataOnDemand.setUUsername(Usuario obj, int index) {

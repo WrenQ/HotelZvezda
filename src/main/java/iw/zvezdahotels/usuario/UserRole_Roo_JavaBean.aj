@@ -7,12 +7,12 @@ import iw.zvezdahotels.usuario.UserRole;
 
 privileged aspect UserRole_Roo_JavaBean {
     
-    public String UserRole.getUserRole() {
-        return this.userRole;
+    public String UserRole.getRoleName() {
+        return this.roleName;
     }
     
-    public void UserRole.setUserRole(String userRole) {
-        this.userRole = userRole;
+    public void UserRole.setRoleName(String roleName) {
+        this.roleName = roleName;
     }
     
 }

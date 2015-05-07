@@ -14,5 +14,5 @@ public class UserRole {
     /**
      */
     @NotNull
-    private String userRole;
+    private String roleName;
 }

@@ -141,7 +141,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<UserRole, String> ApplicationConversionServiceFactoryBean.getUserRoleToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<iw.zvezdahotels.usuario.UserRole, java.lang.String>() {
             public String convert(UserRole userRole) {
-                return new StringBuilder().append(userRole.getUserRole()).toString();
+                return "(no displayable fields)";
             }
         };
     }

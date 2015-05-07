@@ -85,3 +85,18 @@ web mvc setup
 web mvc all --package ~.web
 security setup
 // Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-05-06 19:15:32
+// Spring Roo 1.3.1.RELEASE [rev f4f5256] log opened at 2015-05-07 08:42:04
+focus --class ~.Usuario
+help
+help security
+finder list
+finder add findUsuariosByUUsernameEquals
+focus --class ~.Usuario
+// [failed] field boolean --fieldName u_enabled --notNull
+// [failed] field boolean --fieldName u_enabled --notNull
+// [failed] finder list
+field boolean --fieldName u_enabled --notNull
+field boolean --fieldName uEnabled --notNull
+field set --fieldName uRoles --notNull --type ~.Usuario.UserRole
+focus --class ~.Usuario.UserRole
+field string --fieldName roleName --notNull

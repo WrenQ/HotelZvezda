@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_iw_zvezdahotels_usuario_UserRole" modelAttribute="userRole" path="/userroles" render="${empty dependencies}" z="VU8GkpDW168JCcYnct0tl5x1yj0=">
-        <field:input field="userRole" id="c_iw_zvezdahotels_usuario_UserRole_userRole" required="true" z="xX9ppVAiOApz7BglU5n/FZzuTM0="/>
+        <field:input field="roleName" id="c_iw_zvezdahotels_usuario_UserRole_roleName" required="true" z="OZYpkOeE5K06hXRKEdQYspAZKnk="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_iw_zvezdahotels_usuario_UserRole" render="${not empty dependencies}" z="If4s7k0j0f9brpzoUVSrBUpkOcU="/>
 </div>
