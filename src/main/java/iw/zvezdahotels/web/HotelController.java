@@ -67,4 +67,9 @@ public class HotelController {
         	price += hotelBooking.getHPricePerExtraBed();
         return price;
     }
+	
+	private void populateFormEdit(Model uiModel, Hotel hotel){
+		
+	}
+	
 }

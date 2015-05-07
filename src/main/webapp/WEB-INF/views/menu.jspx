@@ -14,6 +14,7 @@
         <menu:category id="c_hotel" z="7C2zkXEvMSfnPf6jh5Nc/V6fQEY=">
             <menu:item id="i_hotel_new" messageCode="global_menu_new" url="/hotels?form" z="/WBsNr/VgyUOmLXLfXZU5LJT9sY="/>
             <menu:item id="i_hotel_list" messageCode="global_menu_list" url="/hotels?page=1&amp;size=${empty param.size ? 10 : param.size}" z="FOElud587FYY5+wmWtI8bb6O3OY="/>
+            <menu:item id="fi_hotel_availablerooms" messageCode="Search_for_room" url="/hotels?findHotelsByAvailableRooms&amp;form" z="FOElud587FYY5+wmWtI8bb6O3OY="/>
         </menu:category>
         <menu:category id="c_booking" z="EqHElhWCzlLsU9/md/aV2sSwT7w=">
             <menu:item id="i_booking_new" messageCode="global_menu_new" url="/bookings?form" z="Mw7AwtmdsF1Wv2S1c/H/IOT5Y0o="/>

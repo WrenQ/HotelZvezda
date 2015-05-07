@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByHabitacionesDisponibles" id="pl_iw_zvezdahotels_Hotel" path="/hotels" z="user-managed">
+    	<field:select disableFormBinding="true" field="idHotel" id="iw_zvezdahotels_Room_rHotel" itemValue="id" items="${hotels}" path="/hotels" required="true" z="user-managed"/>
+        <field:datetime dateTimePattern="${booking_dateArrival_date_format}" disableFormBinding="true" field="dateArrival" id="iw_zvezdahotels_Booking_bDateCheckIn" required="true" z="user-managed"/>
+        <field:datetime dateTimePattern="${booking_dateLeaving_date_format}" disableFormBinding="true" field="dateLeaving" id="iw_zvezdahotels_Booking_bDateCheckOut" required="true" z="user-managed"/>
+        <div id="_fragment_category_">
+        	<field:select disableFormBinding="true" field="categoryId" id="iw_zvezdaHotels_Booking_bRoom_rCategory" itemValue="id" items="${categories}" path="/categorys" z="user-managed"/>
+        </div>
+        <field:select disableFormBinding="true" field="tipo" id="iw_zvezdahotels_Booking_bRoom_rType" items="${roomTypes}" path="roomtype" z="user-managed"/>
+        <field:checkbox disableFormBinding="true" field="withExtraBed" id="iw_zvezdahotels_Booking_bWithExtraBed" z="user-managed"/>
+    </form:find>
+</div>
