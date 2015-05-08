@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_iw_zvezdahotels_Hotel" items="${hotels}" z="M6nPOZAYEl0LrLRoK0PBLXaYLqI=">
         <table:table data="${hotels}" id="l_iw_zvezdahotels_Hotel" path="/hotels" z="JxdL72ljCtCx3Jn1AE7uwasROqE=">
-            <table:column id="c_iw_zvezdahotels_Hotel_hName" property="HName" z="U2+v+xlQlUAI8AJi6W1ZbY+v/9s="/>
-            <table:column id="c_iw_zvezdahotels_Hotel_hAddress" property="HAddress" z="pPx0OZwXGNSH/ZK+uNjRhaTNmmk="/>
-            <table:column id="c_iw_zvezdahotels_Hotel_hTelephone" property="HTelephone" z="c+lnmKbq8f3mKqzXBlJWEw6ZNxs="/>
-            <table:column id="c_iw_zvezdahotels_Hotel_hEmail" property="HEmail" z="cR5jopSL+0934Oe8nkcQnB8hZac="/>
-            <table:column id="c_iw_zvezdahotels_Hotel_hWebsite" property="HWebsite" z="7iuXwhBVHcu5ULN9e0pW4ifYADI="/>
-            <table:column id="c_iw_zvezdahotels_Hotel_hStars" property="HStars" z="7z5eUzQ639TiV/DVyzf0DLcF9g8="/>
+            <table:column id="c_iw_zvezdahotels_Hotel_name" property="name" z="gvn3Bs8n0E0PMqJZ+YE/OUcAlK0="/>
+            <table:column id="c_iw_zvezdahotels_Hotel_address" property="address" z="err/4ft0vcCMClCL1Krx6nM7BLs="/>
+            <table:column id="c_iw_zvezdahotels_Hotel_telephone" property="telephone" z="90bii6fXyBK81Pcd3XNxhk8DXVA="/>
+            <table:column id="c_iw_zvezdahotels_Hotel_email" property="email" z="qIx/N6K59CE3Gnn+mlPPsPQYgrc="/>
+            <table:column id="c_iw_zvezdahotels_Hotel_website" property="website" z="q9HOQ5g5jIGY69jVbn60Wwrlz5M="/>
+            <table:column id="c_iw_zvezdahotels_Hotel_stars" property="stars" z="42ndp3cAXmQcmus5KaDz+5Em5ew="/>
         </table:table>
     </page:list>
 </div>

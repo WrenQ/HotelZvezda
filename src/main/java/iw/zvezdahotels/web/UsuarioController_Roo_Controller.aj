@@ -3,7 +3,6 @@
 
 package iw.zvezdahotels.web;
 
-import iw.zvezdahotels.Booking;
 import iw.zvezdahotels.Usuario;
 import iw.zvezdahotels.usuario.UserRole;
 import iw.zvezdahotels.web.UsuarioController;
@@ -78,13 +77,12 @@ privileged aspect UsuarioController_Roo_Controller {
     }
     
     void UsuarioController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("usuario_udateregistration_date_format", "dd-MM-yyyy hh:mm:ss");
+        uiModel.addAttribute("usuario_dateregistration_date_format", "dd-MM-yyyy hh:mm:ss");
     }
     
     void UsuarioController.populateEditForm(Model uiModel, Usuario usuario) {
         uiModel.addAttribute("usuario", usuario);
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("bookings", Booking.findAllBookings());
         uiModel.addAttribute("userroles", UserRole.findAllUserRoles());
     }
     

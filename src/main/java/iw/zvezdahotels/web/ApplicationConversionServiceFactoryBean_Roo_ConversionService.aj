@@ -21,7 +21,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Booking, String> ApplicationConversionServiceFactoryBean.getBookingToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<iw.zvezdahotels.Booking, java.lang.String>() {
             public String convert(Booking booking) {
-                return new StringBuilder().append(booking.getBCode()).append(' ').append(booking.getBDateBooking()).append(' ').append(booking.getBDateCheckIn()).append(' ').append(booking.getBDateCheckOut()).toString();
+                return new StringBuilder().append(booking.getCode()).append(' ').append(booking.getDateBooking()).append(' ').append(booking.getDateCheckIn()).append(' ').append(booking.getDateCheckOut()).toString();
             }
         };
     }
@@ -45,7 +45,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Category, String> ApplicationConversionServiceFactoryBean.getCategoryToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<iw.zvezdahotels.Category, java.lang.String>() {
             public String convert(Category category) {
-                return new StringBuilder().append(category.getCName()).append(' ').append(category.getCDescription()).append(' ').append(category.getCPriceFactor()).toString();
+                return new StringBuilder().append(category.getName()).append(' ').append(category.getDescription()).append(' ').append(category.getPriceFactor()).toString();
             }
         };
     }
@@ -69,7 +69,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Hotel, String> ApplicationConversionServiceFactoryBean.getHotelToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<iw.zvezdahotels.Hotel, java.lang.String>() {
             public String convert(Hotel hotel) {
-                return new StringBuilder().append(hotel.getHName()).append(' ').append(hotel.getHAddress()).append(' ').append(hotel.getHTelephone()).append(' ').append(hotel.getHEmail()).toString();
+                return new StringBuilder().append(hotel.getName()).append(' ').append(hotel.getAddress()).append(' ').append(hotel.getTelephone()).append(' ').append(hotel.getEmail()).toString();
             }
         };
     }
@@ -93,7 +93,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Room, String> ApplicationConversionServiceFactoryBean.getRoomToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<iw.zvezdahotels.Room, java.lang.String>() {
             public String convert(Room room) {
-                return new StringBuilder().append(room.getRNumber()).toString();
+                return new StringBuilder().append(room.getNumber()).toString();
             }
         };
     }
@@ -117,7 +117,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Usuario, String> ApplicationConversionServiceFactoryBean.getUsuarioToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<iw.zvezdahotels.Usuario, java.lang.String>() {
             public String convert(Usuario usuario) {
-                return new StringBuilder().append(usuario.getUFullName()).append(' ').append(usuario.getUEmail()).append(' ').append(usuario.getUUsername()).append(' ').append(usuario.getUPassword()).toString();
+                return new StringBuilder().append(usuario.getFullName()).append(' ').append(usuario.getEmail()).append(' ').append(usuario.getUsername()).append(' ').append(usuario.getPassword()).toString();
             }
         };
     }

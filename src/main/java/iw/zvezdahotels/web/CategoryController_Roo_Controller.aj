@@ -4,9 +4,11 @@
 package iw.zvezdahotels.web;
 
 import iw.zvezdahotels.Category;
-import iw.zvezdahotels.Room;
+import iw.zvezdahotels.Hotel;
 import iw.zvezdahotels.web.CategoryController;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.ui.Model;
@@ -34,6 +36,11 @@ privileged aspect CategoryController_Roo_Controller {
     @RequestMapping(params = "form", produces = "text/html")
     public String CategoryController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Category());
+        List<String[]> dependencies = new ArrayList<String[]>();
+        if (Hotel.countHotels() == 0) {
+            dependencies.add(new String[] { "hotel", "hotels" });
+        }
+        uiModel.addAttribute("dependencies", dependencies);
         return "categorys/create";
     }
     
@@ -87,7 +94,7 @@ privileged aspect CategoryController_Roo_Controller {
     
     void CategoryController.populateEditForm(Model uiModel, Category category) {
         uiModel.addAttribute("category", category);
-        uiModel.addAttribute("rooms", Room.findAllRooms());
+        uiModel.addAttribute("hotels", Hotel.findAllHotels());
     }
     
     String CategoryController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

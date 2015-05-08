@@ -37,37 +37,43 @@ privileged aspect RoomDataOnDemand_Roo_DataOnDemand {
     
     public Room RoomDataOnDemand.getNewTransientRoom(int index) {
         Room obj = new Room();
-        setRCategory(obj, index);
-        setRHotel(obj, index);
-        setRNumber(obj, index);
-        setRState(obj, index);
-        setRType(obj, index);
+        setCategory(obj, index);
+        setExtraBedAvailable(obj, index);
+        setHotel(obj, index);
+        setNumber(obj, index);
+        setState(obj, index);
+        setType(obj, index);
         return obj;
     }
     
-    public void RoomDataOnDemand.setRCategory(Room obj, int index) {
-        Category rCategory = categoryDataOnDemand.getRandomCategory();
-        obj.setRCategory(rCategory);
+    public void RoomDataOnDemand.setCategory(Room obj, int index) {
+        Category category = categoryDataOnDemand.getRandomCategory();
+        obj.setCategory(category);
     }
     
-    public void RoomDataOnDemand.setRHotel(Room obj, int index) {
-        Hotel rHotel = hotelDataOnDemand.getRandomHotel();
-        obj.setRHotel(rHotel);
+    public void RoomDataOnDemand.setExtraBedAvailable(Room obj, int index) {
+        Boolean extraBedAvailable = true;
+        obj.setExtraBedAvailable(extraBedAvailable);
     }
     
-    public void RoomDataOnDemand.setRNumber(Room obj, int index) {
-        int rNumber = index;
-        obj.setRNumber(rNumber);
+    public void RoomDataOnDemand.setHotel(Room obj, int index) {
+        Hotel hotel = hotelDataOnDemand.getRandomHotel();
+        obj.setHotel(hotel);
     }
     
-    public void RoomDataOnDemand.setRState(Room obj, int index) {
-        RoomState rState = RoomState.class.getEnumConstants()[0];
-        obj.setRState(rState);
+    public void RoomDataOnDemand.setNumber(Room obj, int index) {
+        int number = index;
+        obj.setNumber(number);
     }
     
-    public void RoomDataOnDemand.setRType(Room obj, int index) {
-        RoomType rType = RoomType.class.getEnumConstants()[0];
-        obj.setRType(rType);
+    public void RoomDataOnDemand.setState(Room obj, int index) {
+        RoomState state = RoomState.class.getEnumConstants()[0];
+        obj.setState(state);
+    }
+    
+    public void RoomDataOnDemand.setType(Room obj, int index) {
+        RoomType type = RoomType.class.getEnumConstants()[0];
+        obj.setType(type);
     }
     
     public Room RoomDataOnDemand.getSpecificRoom(int index) {

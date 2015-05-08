@@ -3,6 +3,8 @@
 
 package iw.zvezdahotels.web;
 
+import iw.zvezdahotels.Booking;
+import iw.zvezdahotels.Category;
 import iw.zvezdahotels.Hotel;
 import iw.zvezdahotels.Room;
 import iw.zvezdahotels.web.HotelController;
@@ -87,6 +89,8 @@ privileged aspect HotelController_Roo_Controller {
     
     void HotelController.populateEditForm(Model uiModel, Hotel hotel) {
         uiModel.addAttribute("hotel", hotel);
+        uiModel.addAttribute("bookings", Booking.findAllBookings());
+        uiModel.addAttribute("categorys", Category.findAllCategorys());
         uiModel.addAttribute("rooms", Room.findAllRooms());
     }
     

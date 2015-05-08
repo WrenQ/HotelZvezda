@@ -4,11 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_iw_zvezdahotels_Room" items="${rooms}" z="tZ2oxGc8WhmYrdx0Rxzg8wqaEY0=">
         <table:table data="${rooms}" id="l_iw_zvezdahotels_Room" path="/rooms" z="YWwn03hCtYkYNRbDB19s/sIKhCo=">
-            <table:column id="c_iw_zvezdahotels_Room_rNumber" property="RNumber" z="C4iVDTD/NBW2gp5/ivHgdOqLuHI="/>
-            <table:column id="c_iw_zvezdahotels_Room_rType" property="RType" z="rilLmK6k/E66nMV0HC3DokSl+qc="/>
-            <table:column id="c_iw_zvezdahotels_Room_rState" property="RState" z="HwJD/zwEIXVQ+Y9KXrHBIoNJ/pg="/>
-            <table:column id="c_iw_zvezdahotels_Room_rCategory" property="RCategory" z="2G8zlleXiT8NRPZPyQSiKOnCYXw="/>
-            <table:column id="c_iw_zvezdahotels_Room_rHotel" property="RHotel" z="U2126HZMTHIhd3rX/y+O/TZsqZg="/>
+            <table:column id="c_iw_zvezdahotels_Room_number" property="number" z="ArzDZFkn0yDICgk5axmG2Hcovq4="/>
+            <table:column id="c_iw_zvezdahotels_Room_type" property="type" z="ymFYLY4zAt2Yp4o7rhlfKo2Hlgg="/>
+            <table:column id="c_iw_zvezdahotels_Room_state" property="state" z="hqoRlBykRBjDlSMQF1pR3re80bU="/>
+            <table:column id="c_iw_zvezdahotels_Room_category" property="category" z="E2lVf7lVASEfc00QD/biR2UrdEw="/>
+            <table:column id="c_iw_zvezdahotels_Room_hotel" property="hotel" z="kIxBYV2VhqdBhtc0c37aPk5otXQ="/>
+            <table:column id="c_iw_zvezdahotels_Room_extraBedAvailable" property="extraBedAvailable" z="Q1paW7Sp+/dhE84pI8BwexD0/YM="/>
         </table:table>
     </page:list>
 </div>

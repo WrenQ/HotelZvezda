@@ -24,67 +24,67 @@ privileged aspect HotelDataOnDemand_Roo_DataOnDemand {
     
     public Hotel HotelDataOnDemand.getNewTransientHotel(int index) {
         Hotel obj = new Hotel();
-        setHAddress(obj, index);
-        setHEmail(obj, index);
-        setHMaxStayingDays(obj, index);
-        setHName(obj, index);
-        setHPricePerDouble(obj, index);
-        setHPricePerExtraBed(obj, index);
-        setHPricePerSingle(obj, index);
-        setHStars(obj, index);
-        setHTelephone(obj, index);
-        setHWebsite(obj, index);
+        setAddress(obj, index);
+        setEmail(obj, index);
+        setMaxStayingDays(obj, index);
+        setName(obj, index);
+        setPricePerDouble(obj, index);
+        setPricePerExtraBed(obj, index);
+        setPricePerSingle(obj, index);
+        setStars(obj, index);
+        setTelephone(obj, index);
+        setWebsite(obj, index);
         return obj;
     }
     
-    public void HotelDataOnDemand.setHAddress(Hotel obj, int index) {
-        String hAddress = "hAddress_" + index;
-        obj.setHAddress(hAddress);
+    public void HotelDataOnDemand.setAddress(Hotel obj, int index) {
+        String address = "address_" + index;
+        obj.setAddress(address);
     }
     
-    public void HotelDataOnDemand.setHEmail(Hotel obj, int index) {
-        String hEmail = "foo" + index + "@bar.com";
-        obj.setHEmail(hEmail);
+    public void HotelDataOnDemand.setEmail(Hotel obj, int index) {
+        String email = "foo" + index + "@bar.com";
+        obj.setEmail(email);
     }
     
-    public void HotelDataOnDemand.setHMaxStayingDays(Hotel obj, int index) {
-        int hMaxStayingDays = index;
-        obj.setHMaxStayingDays(hMaxStayingDays);
+    public void HotelDataOnDemand.setMaxStayingDays(Hotel obj, int index) {
+        int maxStayingDays = index;
+        obj.setMaxStayingDays(maxStayingDays);
     }
     
-    public void HotelDataOnDemand.setHName(Hotel obj, int index) {
-        String hName = "hName_" + index;
-        obj.setHName(hName);
+    public void HotelDataOnDemand.setName(Hotel obj, int index) {
+        String name = "name_" + index;
+        obj.setName(name);
     }
     
-    public void HotelDataOnDemand.setHPricePerDouble(Hotel obj, int index) {
-        double hPricePerDouble = new Integer(index).doubleValue();
-        obj.setHPricePerDouble(hPricePerDouble);
+    public void HotelDataOnDemand.setPricePerDouble(Hotel obj, int index) {
+        double pricePerDouble = new Integer(index).doubleValue();
+        obj.setPricePerDouble(pricePerDouble);
     }
     
-    public void HotelDataOnDemand.setHPricePerExtraBed(Hotel obj, int index) {
-        double hPricePerExtraBed = new Integer(index).doubleValue();
-        obj.setHPricePerExtraBed(hPricePerExtraBed);
+    public void HotelDataOnDemand.setPricePerExtraBed(Hotel obj, int index) {
+        double pricePerExtraBed = new Integer(index).doubleValue();
+        obj.setPricePerExtraBed(pricePerExtraBed);
     }
     
-    public void HotelDataOnDemand.setHPricePerSingle(Hotel obj, int index) {
-        double hPricePerSingle = new Integer(index).doubleValue();
-        obj.setHPricePerSingle(hPricePerSingle);
+    public void HotelDataOnDemand.setPricePerSingle(Hotel obj, int index) {
+        double pricePerSingle = new Integer(index).doubleValue();
+        obj.setPricePerSingle(pricePerSingle);
     }
     
-    public void HotelDataOnDemand.setHStars(Hotel obj, int index) {
-        int hStars = index;
-        obj.setHStars(hStars);
+    public void HotelDataOnDemand.setStars(Hotel obj, int index) {
+        int stars = index;
+        obj.setStars(stars);
     }
     
-    public void HotelDataOnDemand.setHTelephone(Hotel obj, int index) {
-        String hTelephone = "hTelephone_" + index;
-        obj.setHTelephone(hTelephone);
+    public void HotelDataOnDemand.setTelephone(Hotel obj, int index) {
+        String telephone = "telephone_" + index;
+        obj.setTelephone(telephone);
     }
     
-    public void HotelDataOnDemand.setHWebsite(Hotel obj, int index) {
-        String hWebsite = "hWebsite_" + index;
-        obj.setHWebsite(hWebsite);
+    public void HotelDataOnDemand.setWebsite(Hotel obj, int index) {
+        String website = "website_" + index;
+        obj.setWebsite(website);
     }
     
     public Hotel HotelDataOnDemand.getSpecificHotel(int index) {

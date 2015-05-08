@@ -2,15 +2,20 @@ package iw.zvezdahotels;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
+
 import iw.zvezdahotels.room.RoomType;
+
 import javax.validation.constraints.NotNull;
+
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.EntityManager;
 import javax.persistence.OneToMany;
 import javax.persistence.TypedQuery;
+
 import org.springframework.roo.addon.json.RooJson;
 
 @RooJavaBean
@@ -22,55 +27,65 @@ public class Hotel {
     /**
      */
     @NotNull
-    private String hName;
+    private String name;
 
     /**
      */
     @NotNull
-    private String hAddress;
+    private String address;
 
     /**
      */
     @NotNull
-    private String hTelephone;
+    private String telephone;
 
     /**
      */
-    private String hEmail;
+    private String email;
 
     /**
      */
-    private String hWebsite;
-
-    /**
-     */
-    @NotNull
-    private int hStars;
+    private String website;
 
     /**
      */
     @NotNull
-    private double hPricePerSingle;
+    private int stars;
 
     /**
      */
     @NotNull
-    private double hPricePerDouble;
+    private double pricePerSingle;
+
+    /**
+     */
+    @NotNull
+    private double pricePerDouble;
     
     /**
      */
     @NotNull
-    private double hPricePerExtraBed;
+    private double pricePerExtraBed;
 
     /**
      */
     @NotNull
-    private int hMaxStayingDays;
+    private int maxStayingDays;
 
     /**
      */
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "rHotel")
-    private Set<Room> hRooms = new HashSet<Room>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
+    private Set<Room> rooms = new HashSet<Room>();
+    
+    /**
+     */
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
+    private Set<Booking> bookings = new HashSet<Booking>();
+    
+    /**
+     */
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
+    private Set<Category> categories = new HashSet<Category>();
 
     /**
      * CUSTOM FINDERS -------------------------------------

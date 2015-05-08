@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_iw_zvezdahotels_Booking" items="${bookings}" z="2+osnSTUiIvegy4oF4uaO6Srlqk=">
         <table:table data="${bookings}" id="l_iw_zvezdahotels_Booking" path="/bookings" z="CqeB2AN+0JvArc+BxEZ7eBhLmcQ=">
-            <table:column id="c_iw_zvezdahotels_Booking_bCode" property="BCode" z="ye/l0RXJv0rPhWVahD54UIprAeE="/>
-            <table:column id="c_iw_zvezdahotels_Booking_bWithExtraBed" property="BWithExtraBed" z="YRPm4TCXyZCn8dyscuzXd31GVvo="/>
-            <table:column date="true" dateTimePattern="${booking_bdatebooking_date_format}" id="c_iw_zvezdahotels_Booking_bDateBooking" property="BDateBooking" z="bAmxqq5n22psdFbhJpcUZ0T28BI="/>
-            <table:column date="true" dateTimePattern="${booking_bdatecheckin_date_format}" id="c_iw_zvezdahotels_Booking_bDateCheckIn" property="BDateCheckIn" z="0lh87rkBqJ3Ot2RwvQy/v5SXVO4="/>
-            <table:column date="true" dateTimePattern="${booking_bdatecheckout_date_format}" id="c_iw_zvezdahotels_Booking_bDateCheckOut" property="BDateCheckOut" z="/c4wCwbPvGQ7JLLNGJwltyrQ05U="/>
-            <table:column id="c_iw_zvezdahotels_Booking_bCreditCard" property="BCreditCard" z="klEpXngnQI523F34hkbkVETESKg="/>
+            <table:column id="c_iw_zvezdahotels_Booking_code" property="code" z="Lw7ylCab5W95sEKV6IX00jkJ3ZI="/>
+            <table:column id="c_iw_zvezdahotels_Booking_withExtraBed" property="withExtraBed" z="EVBQg0E28LSKEdQEPI5U1ZdGq2c="/>
+            <table:column date="true" dateTimePattern="${booking_datebooking_date_format}" id="c_iw_zvezdahotels_Booking_dateBooking" property="dateBooking" z="LK2k26IyFu78v+InvIBtSOyIuY0="/>
+            <table:column date="true" dateTimePattern="${booking_datecheckin_date_format}" id="c_iw_zvezdahotels_Booking_dateCheckIn" property="dateCheckIn" z="gj5crIPoSo2HZCgbubdjR0n5XsQ="/>
+            <table:column date="true" dateTimePattern="${booking_datecheckout_date_format}" id="c_iw_zvezdahotels_Booking_dateCheckOut" property="dateCheckOut" z="0pjL8BVvbVZ7bfG8Xlv4QDIXx4s="/>
+            <table:column id="c_iw_zvezdahotels_Booking_creditCard" property="creditCard" z="0r4iCDqLfpGR8ufBsvqd/iw0UnU="/>
         </table:table>
     </page:list>
 </div>

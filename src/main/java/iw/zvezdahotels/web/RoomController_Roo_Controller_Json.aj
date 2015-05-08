@@ -3,11 +3,7 @@
 
 package iw.zvezdahotels.web;
 
-import iw.zvezdahotels.Category;
-import iw.zvezdahotels.Hotel;
 import iw.zvezdahotels.Room;
-import iw.zvezdahotels.room.RoomState;
-import iw.zvezdahotels.room.RoomType;
 import iw.zvezdahotels.web.RoomController;
 import java.util.List;
 import org.springframework.http.HttpHeaders;
@@ -17,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -108,54 +103,6 @@ privileged aspect RoomController_Roo_Controller_Json {
             }
             room.remove();
             return new ResponseEntity<String>(headers, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-    
-    @RequestMapping(params = "find=ByRCategory", headers = "Accept=application/json")
-    @ResponseBody
-    public ResponseEntity<String> RoomController.jsonFindRoomsByRCategory(@RequestParam("rCategory") Category rCategory) {
-        HttpHeaders headers = new HttpHeaders();
-        try {
-            headers.add("Content-Type", "application/json; charset=utf-8");
-            return new ResponseEntity<String>(Room.toJsonArray(Room.findRoomsByRCategory(rCategory).getResultList()), headers, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-    
-    @RequestMapping(params = "find=ByRHotel", headers = "Accept=application/json")
-    @ResponseBody
-    public ResponseEntity<String> RoomController.jsonFindRoomsByRHotel(@RequestParam("rHotel") Hotel rHotel) {
-        HttpHeaders headers = new HttpHeaders();
-        try {
-            headers.add("Content-Type", "application/json; charset=utf-8");
-            return new ResponseEntity<String>(Room.toJsonArray(Room.findRoomsByRHotel(rHotel).getResultList()), headers, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-    
-    @RequestMapping(params = "find=ByRState", headers = "Accept=application/json")
-    @ResponseBody
-    public ResponseEntity<String> RoomController.jsonFindRoomsByRState(@RequestParam("rState") RoomState rState) {
-        HttpHeaders headers = new HttpHeaders();
-        try {
-            headers.add("Content-Type", "application/json; charset=utf-8");
-            return new ResponseEntity<String>(Room.toJsonArray(Room.findRoomsByRState(rState).getResultList()), headers, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-    
-    @RequestMapping(params = "find=ByRType", headers = "Accept=application/json")
-    @ResponseBody
-    public ResponseEntity<String> RoomController.jsonFindRoomsByRType(@RequestParam("rType") RoomType rType) {
-        HttpHeaders headers = new HttpHeaders();
-        try {
-            headers.add("Content-Type", "application/json; charset=utf-8");
-            return new ResponseEntity<String>(Room.toJsonArray(Room.findRoomsByRType(rType).getResultList()), headers, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
         }

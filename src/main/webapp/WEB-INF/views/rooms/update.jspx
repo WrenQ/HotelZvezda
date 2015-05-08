@@ -3,11 +3,11 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_iw_zvezdahotels_Room" modelAttribute="room" path="/rooms" versionField="Version" z="fiwHLAbwBRfdQgdqmYx4Jm2J8wo=">
-        <field:input field="rNumber" id="c_iw_zvezdahotels_Room_rNumber" required="true" z="AZN4VRkTX32bzQXwZcMl8QgBrD0="/>
-        <field:select field="rType" id="c_iw_zvezdahotels_Room_rType" items="${roomtypes}" path="roomtypes" z="+cpfEhHnV/a6cuV7UWOUd1FSwEQ="/>
-        <field:select field="rState" id="c_iw_zvezdahotels_Room_rState" items="${roomstates}" path="roomstates" z="R5v4WdVkBkCgE2MBDIgdxmvOVgs="/>
-        <field:select field="rCategory" id="c_iw_zvezdahotels_Room_rCategory" itemValue="id" items="${categorys}" path="/categorys" required="true" z="ldkAPvubisuyTekMmO5cFtvq5Wc="/>
-        <field:select field="rHotel" id="c_iw_zvezdahotels_Room_rHotel" itemValue="id" items="${hotels}" path="/hotels" required="true" z="k5d4BTRyPP5PJ8EPO/B0FmAvOlM="/>
-        <field:simple field="rBookings" id="c_iw_zvezdahotels_Room_rBookings" messageCode="entity_reference_not_managed" messageCodeAttribute="Booking" z="q40c7T5yV78NaKyEr0lnePf+ySo="/>
+        <field:input field="number" id="c_iw_zvezdahotels_Room_number" required="true" z="Uqgv/uTeU8YL5aOeUB/5KvsZO7s="/>
+        <field:select field="type" id="c_iw_zvezdahotels_Room_type" items="${roomtypes}" path="roomtypes" z="CoXs8Js2QNnveY9VOvCBs5BueZg="/>
+        <field:select field="state" id="c_iw_zvezdahotels_Room_state" items="${roomstates}" path="roomstates" z="FZ8Wz7lH1Cd66997hpK479G3eLI="/>
+        <field:select field="category" id="c_iw_zvezdahotels_Room_category" itemValue="id" items="${categorys}" path="/categorys" required="true" z="bvhCd4l7SEeokkOoj876TlSnUwM="/>
+        <field:select field="hotel" id="c_iw_zvezdahotels_Room_hotel" itemValue="id" items="${hotels}" path="/hotels" required="true" z="GwbZZIiYc54z7Gtk97TQ96g5YLs="/>
+        <field:checkbox field="extraBedAvailable" id="c_iw_zvezdahotels_Room_extraBedAvailable" z="WqbflB60iWJwEdk9Zg/U9xc0z1s="/>
     </form:update>
 </div>

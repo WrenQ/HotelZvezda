@@ -22,32 +22,33 @@ public class Room {
     /**
      */
     @NotNull
-    private int rNumber;
+    private int number;
+    
+    /**
+     */
+    @NotNull
+    private boolean extraBedAvailable;
 
     /**
      */
     @Enumerated
-    private RoomType rType;
+    private RoomType type;
 
     /**
      */
     @Enumerated
-    private RoomState rState;
+    private RoomState state;
 
     /**
      */
     @NotNull
     @ManyToOne
-    private Category rCategory;
+    private Category category;
 
     /**
      */
     @NotNull
     @ManyToOne
-    private Hotel rHotel;
+    private Hotel hotel;
 
-    /**
-     */
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "bRoom")
-    private Set<Booking> rBookings = new HashSet<Booking>();
 }

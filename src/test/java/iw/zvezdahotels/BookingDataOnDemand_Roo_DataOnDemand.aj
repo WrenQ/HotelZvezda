@@ -5,8 +5,10 @@ package iw.zvezdahotels;
 
 import iw.zvezdahotels.Booking;
 import iw.zvezdahotels.BookingDataOnDemand;
-import iw.zvezdahotels.Room;
-import iw.zvezdahotels.RoomDataOnDemand;
+import iw.zvezdahotels.Category;
+import iw.zvezdahotels.CategoryDataOnDemand;
+import iw.zvezdahotels.Hotel;
+import iw.zvezdahotels.HotelDataOnDemand;
 import iw.zvezdahotels.Usuario;
 import iw.zvezdahotels.UsuarioDataOnDemand;
 import java.security.SecureRandom;
@@ -31,77 +33,80 @@ privileged aspect BookingDataOnDemand_Roo_DataOnDemand {
     private List<Booking> BookingDataOnDemand.data;
     
     @Autowired
-    RoomDataOnDemand BookingDataOnDemand.roomDataOnDemand;
+    CategoryDataOnDemand BookingDataOnDemand.categoryDataOnDemand;
+    
+    @Autowired
+    HotelDataOnDemand BookingDataOnDemand.hotelDataOnDemand;
     
     @Autowired
     UsuarioDataOnDemand BookingDataOnDemand.usuarioDataOnDemand;
     
     public Booking BookingDataOnDemand.getNewTransientBooking(int index) {
         Booking obj = new Booking();
-        setBCode(obj, index);
-        setBCreditCard(obj, index);
-        setBDateBooking(obj, index);
-        setBDateCheckIn(obj, index);
-        setBDateCheckOut(obj, index);
-        setBDays(obj, index);
-        setBPartialBill(obj, index);
-        setBRoom(obj, index);
-        setBUser(obj, index);
-        setBWithExtraBed(obj, index);
+        setCategory(obj, index);
+        setCode(obj, index);
+        setCreditCard(obj, index);
+        setDateBooking(obj, index);
+        setDateCheckIn(obj, index);
+        setDateCheckOut(obj, index);
+        setHotel(obj, index);
+        setPartialBill(obj, index);
+        setUser(obj, index);
+        setWithExtraBed(obj, index);
         return obj;
     }
     
-    public void BookingDataOnDemand.setBCode(Booking obj, int index) {
-        int bCode = index;
-        obj.setBCode(bCode);
+    public void BookingDataOnDemand.setCategory(Booking obj, int index) {
+        Category category = categoryDataOnDemand.getRandomCategory();
+        obj.setCategory(category);
     }
     
-    public void BookingDataOnDemand.setBCreditCard(Booking obj, int index) {
-        String bCreditCard = "bCreditCardxxx_" + index;
-        if (bCreditCard.length() > 16) {
-            bCreditCard = bCreditCard.substring(0, 16);
+    public void BookingDataOnDemand.setCode(Booking obj, int index) {
+        int code = index;
+        obj.setCode(code);
+    }
+    
+    public void BookingDataOnDemand.setCreditCard(Booking obj, int index) {
+        String creditCard = "creditCardxxxx_" + index;
+        if (creditCard.length() > 16) {
+            creditCard = creditCard.substring(0, 16);
         }
-        obj.setBCreditCard(bCreditCard);
+        obj.setCreditCard(creditCard);
     }
     
-    public void BookingDataOnDemand.setBDateBooking(Booking obj, int index) {
-        Date bDateBooking = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
-        obj.setBDateBooking(bDateBooking);
+    public void BookingDataOnDemand.setDateBooking(Booking obj, int index) {
+        Date dateBooking = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
+        obj.setDateBooking(dateBooking);
     }
     
-    public void BookingDataOnDemand.setBDateCheckIn(Booking obj, int index) {
-        Date bDateCheckIn = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
-        obj.setBDateCheckIn(bDateCheckIn);
+    public void BookingDataOnDemand.setDateCheckIn(Booking obj, int index) {
+        Date dateCheckIn = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
+        obj.setDateCheckIn(dateCheckIn);
     }
     
-    public void BookingDataOnDemand.setBDateCheckOut(Booking obj, int index) {
-        Date bDateCheckOut = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
-        obj.setBDateCheckOut(bDateCheckOut);
+    public void BookingDataOnDemand.setDateCheckOut(Booking obj, int index) {
+        Date dateCheckOut = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
+        obj.setDateCheckOut(dateCheckOut);
     }
     
-    public void BookingDataOnDemand.setBDays(Booking obj, int index) {
-        Long bDays = new Integer(index).longValue();
-        obj.setBDays(bDays);
+    public void BookingDataOnDemand.setHotel(Booking obj, int index) {
+        Hotel hotel = hotelDataOnDemand.getRandomHotel();
+        obj.setHotel(hotel);
     }
     
-    public void BookingDataOnDemand.setBPartialBill(Booking obj, int index) {
-        double bPartialBill = new Integer(index).doubleValue();
-        obj.setBPartialBill(bPartialBill);
+    public void BookingDataOnDemand.setPartialBill(Booking obj, int index) {
+        double partialBill = new Integer(index).doubleValue();
+        obj.setPartialBill(partialBill);
     }
     
-    public void BookingDataOnDemand.setBRoom(Booking obj, int index) {
-        Room bRoom = roomDataOnDemand.getRandomRoom();
-        obj.setBRoom(bRoom);
+    public void BookingDataOnDemand.setUser(Booking obj, int index) {
+        Usuario user = usuarioDataOnDemand.getRandomUsuario();
+        obj.setUser(user);
     }
     
-    public void BookingDataOnDemand.setBUser(Booking obj, int index) {
-        Usuario bUser = usuarioDataOnDemand.getRandomUsuario();
-        obj.setBUser(bUser);
-    }
-    
-    public void BookingDataOnDemand.setBWithExtraBed(Booking obj, int index) {
-        Boolean bWithExtraBed = Boolean.TRUE;
-        obj.setBWithExtraBed(bWithExtraBed);
+    public void BookingDataOnDemand.setWithExtraBed(Booking obj, int index) {
+        Boolean withExtraBed = true;
+        obj.setWithExtraBed(withExtraBed);
     }
     
     public Booking BookingDataOnDemand.getSpecificBooking(int index) {

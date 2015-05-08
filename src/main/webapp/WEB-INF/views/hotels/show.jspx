@@ -3,15 +3,15 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_iw_zvezdahotels_Hotel" object="${hotel}" path="/hotels" z="ZyZrVCzOX3NGFUcM6osLp4t7FkE=">
-        <field:display field="HName" id="s_iw_zvezdahotels_Hotel_hName" object="${hotel}" z="w+5uMV3phcNAasTlfqqTPDz68zs="/>
-        <field:display field="HAddress" id="s_iw_zvezdahotels_Hotel_hAddress" object="${hotel}" z="9qtGJwFVQxatQ1UN+jKLZec24tY="/>
-        <field:display field="HTelephone" id="s_iw_zvezdahotels_Hotel_hTelephone" object="${hotel}" z="5cu4j0kFT703cSBqu2TpMg549ws="/>
-        <field:display field="HEmail" id="s_iw_zvezdahotels_Hotel_hEmail" object="${hotel}" z="4f7A+ZUrArUipdVG2Ss3sd07WkQ="/>
-        <field:display field="HWebsite" id="s_iw_zvezdahotels_Hotel_hWebsite" object="${hotel}" z="4ddi4AA6qiOn1/WwFzQIQu5PlvA="/>
-        <field:display field="HStars" id="s_iw_zvezdahotels_Hotel_hStars" object="${hotel}" z="+hwYip3PqAZp/uGSEq3VdZXDwIE="/>
-        <field:display field="HPricePerSingle" id="s_iw_zvezdahotels_Hotel_hPricePerSingle" object="${hotel}" z="qhbXvXehcTGpKd33iqH6rL9UzKQ="/>
-        <field:display field="HPricePerDouble" id="s_iw_zvezdahotels_Hotel_hPricePerDouble" object="${hotel}" z="n/UeX+KRyGOTLKbDHGPDet7pp7k="/>
-        <field:display field="HMaxStayingDays" id="s_iw_zvezdahotels_Hotel_hMaxStayingDays" object="${hotel}" z="AZqEh0x7lD6/cmASxWPa/MLbHOk="/>
-        <field:display field="HPricePerExtraBed" id="s_iw_zvezdahotels_Hotel_hPricePerExtraBed" object="${hotel}" z="JX2Q++Q+8Jtb6G/V1CBNk2vcev0="/>
+        <field:display field="name" id="s_iw_zvezdahotels_Hotel_name" object="${hotel}" z="pphffNHZjRuZP3X1zwIqZAnkp78="/>
+        <field:display field="address" id="s_iw_zvezdahotels_Hotel_address" object="${hotel}" z="QPoRTeMsTyWYL9D/6wHY44Ur6Ho="/>
+        <field:display field="telephone" id="s_iw_zvezdahotels_Hotel_telephone" object="${hotel}" z="IjKrbyEV7agZtT359d17xS+Pkrc="/>
+        <field:display field="email" id="s_iw_zvezdahotels_Hotel_email" object="${hotel}" z="LdUFjmRij9hHk3g8WblUzgL10xA="/>
+        <field:display field="website" id="s_iw_zvezdahotels_Hotel_website" object="${hotel}" z="9g74mkb/e+dBcDy4Fisd3tvbVrY="/>
+        <field:display field="stars" id="s_iw_zvezdahotels_Hotel_stars" object="${hotel}" z="/ZSkjByYu0bGsfmZthEa+oPvXRs="/>
+        <field:display field="pricePerSingle" id="s_iw_zvezdahotels_Hotel_pricePerSingle" object="${hotel}" z="h5WpeU+NH5krbexBwBpTMqMOU88="/>
+        <field:display field="pricePerDouble" id="s_iw_zvezdahotels_Hotel_pricePerDouble" object="${hotel}" z="GXluTEBSWtjrj+y/HmHovfcfJBQ="/>
+        <field:display field="pricePerExtraBed" id="s_iw_zvezdahotels_Hotel_pricePerExtraBed" object="${hotel}" z="7/gI9KlDZ17x3GBSDUKHV2w8pFs="/>
+        <field:display field="maxStayingDays" id="s_iw_zvezdahotels_Hotel_maxStayingDays" object="${hotel}" z="U5fK8pN0NNLirB5kq8tGv9osGm8="/>
     </page:show>
 </div>

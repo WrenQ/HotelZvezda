@@ -3,7 +3,6 @@
 
 package iw.zvezdahotels.web;
 
-import iw.zvezdahotels.Booking;
 import iw.zvezdahotels.Category;
 import iw.zvezdahotels.Hotel;
 import iw.zvezdahotels.Room;
@@ -43,10 +42,10 @@ privileged aspect RoomController_Roo_Controller {
         populateEditForm(uiModel, new Room());
         List<String[]> dependencies = new ArrayList<String[]>();
         if (Category.countCategorys() == 0) {
-            dependencies.add(new String[] { "rType", "categorys" });
+            dependencies.add(new String[] { "type", "categorys" });
         }
         if (Hotel.countHotels() == 0) {
-            dependencies.add(new String[] { "rState", "hotels" });
+            dependencies.add(new String[] { "state", "hotels" });
         }
         uiModel.addAttribute("dependencies", dependencies);
         return "rooms/create";
@@ -102,7 +101,6 @@ privileged aspect RoomController_Roo_Controller {
     
     void RoomController.populateEditForm(Model uiModel, Room room) {
         uiModel.addAttribute("room", room);
-        uiModel.addAttribute("bookings", Booking.findAllBookings());
         uiModel.addAttribute("categorys", Category.findAllCategorys());
         uiModel.addAttribute("hotels", Hotel.findAllHotels());
         uiModel.addAttribute("roomstates", Arrays.asList(RoomState.values()));

@@ -3,9 +3,11 @@
 
 package iw.zvezdahotels.web;
 
+import iw.zvezdahotels.Booking;
 import iw.zvezdahotels.Hotel;
 import iw.zvezdahotels.web.HotelController;
 import java.util.List;
+import java.util.Set;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -103,6 +106,18 @@ privileged aspect HotelController_Roo_Controller_Json {
             }
             hotel.remove();
             return new ResponseEntity<String>(headers, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    
+    @RequestMapping(params = "find=ByBookings", headers = "Accept=application/json")
+    @ResponseBody
+    public ResponseEntity<String> HotelController.jsonFindHotelsByBookings(@RequestParam("bookings") Set<Booking> bookings) {
+        HttpHeaders headers = new HttpHeaders();
+        try {
+            headers.add("Content-Type", "application/json; charset=utf-8");
+            return new ResponseEntity<String>(Hotel.toJsonArray(Hotel.findHotelsByBookings(bookings).getResultList()), headers, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
         }

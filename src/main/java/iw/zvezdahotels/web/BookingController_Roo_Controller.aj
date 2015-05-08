@@ -4,7 +4,8 @@
 package iw.zvezdahotels.web;
 
 import iw.zvezdahotels.Booking;
-import iw.zvezdahotels.Room;
+import iw.zvezdahotels.Category;
+import iw.zvezdahotels.Hotel;
 import iw.zvezdahotels.Usuario;
 import iw.zvezdahotels.web.BookingController;
 import java.io.UnsupportedEncodingException;
@@ -28,10 +29,13 @@ privileged aspect BookingController_Roo_Controller {
         populateEditForm(uiModel, new Booking());
         List<String[]> dependencies = new ArrayList<String[]>();
         if (Usuario.countUsuarios() == 0) {
-            dependencies.add(new String[] { "bUser", "usuarios" });
+            dependencies.add(new String[] { "user", "usuarios" });
         }
-        if (Room.countRooms() == 0) {
-            dependencies.add(new String[] { "bRoom", "rooms" });
+        if (Hotel.countHotels() == 0) {
+            dependencies.add(new String[] { "hotel", "hotels" });
+        }
+        if (Category.countCategorys() == 0) {
+            dependencies.add(new String[] { "category", "categorys" });
         }
         uiModel.addAttribute("dependencies", dependencies);
         return "bookings/create";
@@ -88,15 +92,16 @@ privileged aspect BookingController_Roo_Controller {
     }
     
     void BookingController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("booking_bdatebooking_date_format", "dd-MM-yyyy hh:mm:ss");
-        uiModel.addAttribute("booking_bdatecheckin_date_format", "dd-MM-yyyy hh:mm:ss");
-        uiModel.addAttribute("booking_bdatecheckout_date_format", "dd-MM-yyyy hh:mm:ss");
+        uiModel.addAttribute("booking_datebooking_date_format", "dd-MM-yyyy hh:mm:ss");
+        uiModel.addAttribute("booking_datecheckin_date_format", "dd-MM-yyyy hh:mm:ss");
+        uiModel.addAttribute("booking_datecheckout_date_format", "dd-MM-yyyy hh:mm:ss");
     }
     
     void BookingController.populateEditForm(Model uiModel, Booking booking) {
         uiModel.addAttribute("booking", booking);
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("rooms", Room.findAllRooms());
+        uiModel.addAttribute("categorys", Category.findAllCategorys());
+        uiModel.addAttribute("hotels", Hotel.findAllHotels());
         uiModel.addAttribute("usuarios", Usuario.findAllUsuarios());
     }
     

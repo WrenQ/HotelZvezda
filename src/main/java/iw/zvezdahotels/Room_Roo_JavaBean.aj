@@ -3,62 +3,60 @@
 
 package iw.zvezdahotels;
 
-import iw.zvezdahotels.Booking;
 import iw.zvezdahotels.Category;
 import iw.zvezdahotels.Hotel;
 import iw.zvezdahotels.Room;
 import iw.zvezdahotels.room.RoomState;
 import iw.zvezdahotels.room.RoomType;
-import java.util.Set;
 
 privileged aspect Room_Roo_JavaBean {
     
-    public int Room.getRNumber() {
-        return this.rNumber;
+    public int Room.getNumber() {
+        return this.number;
     }
     
-    public void Room.setRNumber(int rNumber) {
-        this.rNumber = rNumber;
+    public void Room.setNumber(int number) {
+        this.number = number;
     }
     
-    public RoomType Room.getRType() {
-        return this.rType;
+    public boolean Room.isExtraBedAvailable() {
+        return this.extraBedAvailable;
     }
     
-    public void Room.setRType(RoomType rType) {
-        this.rType = rType;
+    public void Room.setExtraBedAvailable(boolean extraBedAvailable) {
+        this.extraBedAvailable = extraBedAvailable;
     }
     
-    public RoomState Room.getRState() {
-        return this.rState;
+    public RoomType Room.getType() {
+        return this.type;
     }
     
-    public void Room.setRState(RoomState rState) {
-        this.rState = rState;
+    public void Room.setType(RoomType type) {
+        this.type = type;
     }
     
-    public Category Room.getRCategory() {
-        return this.rCategory;
+    public RoomState Room.getState() {
+        return this.state;
     }
     
-    public void Room.setRCategory(Category rCategory) {
-        this.rCategory = rCategory;
+    public void Room.setState(RoomState state) {
+        this.state = state;
     }
     
-    public Hotel Room.getRHotel() {
-        return this.rHotel;
+    public Category Room.getCategory() {
+        return this.category;
     }
     
-    public void Room.setRHotel(Hotel rHotel) {
-        this.rHotel = rHotel;
+    public void Room.setCategory(Category category) {
+        this.category = category;
     }
     
-    public Set<Booking> Room.getRBookings() {
-        return this.rBookings;
+    public Hotel Room.getHotel() {
+        return this.hotel;
     }
     
-    public void Room.setRBookings(Set<Booking> rBookings) {
-        this.rBookings = rBookings;
+    public void Room.setHotel(Hotel hotel) {
+        this.hotel = hotel;
     }
     
 }

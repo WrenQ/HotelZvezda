@@ -13,64 +13,66 @@ import org.springframework.roo.addon.json.RooJson;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(finders = { "findBookingsByBDateBookingBetween", "findBookingsByBRoom" })
+@RooJpaActiveRecord(finders = { "findBookingsByDateBookingBetween", "findBookingsByRoom" })
 @RooJson(deepSerialize = true)
 public class Booking {
 
     /**
      */
     @NotNull
-    private int bCode;
+    private int code;
 
     /**
      */
     @NotNull
-    private Boolean bWithExtraBed;
+    private boolean withExtraBed;
 
     /**
      */
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(pattern = "dd-MM-yyyy hh:mm:ss")
-    private Date bDateBooking;
+    private Date dateBooking;
 
     /**
      */
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(pattern = "dd-MM-yyyy hh:mm:ss")
-    private Date bDateCheckIn;
+    private Date dateCheckIn;
 
     /**
      */
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(pattern = "dd-MM-yyyy hh:mm:ss")
-    private Date bDateCheckOut;
+    private Date dateCheckOut;
 
     /**
      */
     @NotNull
     @Size(min = 16, max = 16)
-    private String bCreditCard;
+    private String creditCard;
 
     /**
      */
     @NotNull
-    private double bPartialBill;
-
-    /**
-     */
-    @NotNull
-    @ManyToOne
-    private Usuario bUser;
+    private double partialBill;
 
     /**
      */
     @NotNull
     @ManyToOne
-    private Room bRoom;
+    private Usuario user;
 
     /**
      */
     @NotNull
-    private long bDays;
+    @ManyToOne
+    private Hotel hotel;
+    
+    /**
+     */
+    @NotNull
+    @ManyToOne
+    private Category category;
+
 }

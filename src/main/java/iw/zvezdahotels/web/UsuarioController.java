@@ -42,13 +42,13 @@ public class UsuarioController {
         if (bindingResult.hasErrors()) 
             populateEditForm(uiModel, usuario);
         try{
-        	String hashedPassword = sha256(usuario.getUPassword());
-        	usuario.setUPassword(hashedPassword);
-        	usuario.setUEnabled(true);
+        	String hashedPassword = sha256(usuario.getPassword());
+        	usuario.setPassword(hashedPassword);
+        	usuario.setEnabled(true);
         	Set<UserRole> userRoles = new HashSet<UserRole>();
         	userRoles.add(UserRole.findUserRole((long)3)); //Se asigna automáticamente rol de usuario regular 'ROLE_USER'
-        	usuario.setURoles(userRoles);
-        	usuario.setUDateRegistration(Calendar.getInstance().getTime());
+        	usuario.setRoles(userRoles);
+        	usuario.setDateRegistration(Calendar.getInstance().getTime());
 	        uiModel.asMap().clear();
 	        usuario.persist();
 	        return "redirect:/usuarios/" + encodeUrlPathSegment(usuario.getId().toString(), httpServletRequest);

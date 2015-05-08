@@ -4,90 +4,91 @@
 package iw.zvezdahotels;
 
 import iw.zvezdahotels.Booking;
-import iw.zvezdahotels.Room;
+import iw.zvezdahotels.Category;
+import iw.zvezdahotels.Hotel;
 import iw.zvezdahotels.Usuario;
 import java.util.Date;
 
 privileged aspect Booking_Roo_JavaBean {
     
-    public int Booking.getBCode() {
-        return this.bCode;
+    public int Booking.getCode() {
+        return this.code;
     }
     
-    public void Booking.setBCode(int bCode) {
-        this.bCode = bCode;
+    public void Booking.setCode(int code) {
+        this.code = code;
     }
     
-    public Boolean Booking.getBWithExtraBed() {
-        return this.bWithExtraBed;
+    public boolean Booking.isWithExtraBed() {
+        return this.withExtraBed;
     }
     
-    public void Booking.setBWithExtraBed(Boolean bWithExtraBed) {
-        this.bWithExtraBed = bWithExtraBed;
+    public void Booking.setWithExtraBed(boolean withExtraBed) {
+        this.withExtraBed = withExtraBed;
     }
     
-    public Date Booking.getBDateBooking() {
-        return this.bDateBooking;
+    public Date Booking.getDateBooking() {
+        return this.dateBooking;
     }
     
-    public void Booking.setBDateBooking(Date bDateBooking) {
-        this.bDateBooking = bDateBooking;
+    public void Booking.setDateBooking(Date dateBooking) {
+        this.dateBooking = dateBooking;
     }
     
-    public Date Booking.getBDateCheckIn() {
-        return this.bDateCheckIn;
+    public Date Booking.getDateCheckIn() {
+        return this.dateCheckIn;
     }
     
-    public void Booking.setBDateCheckIn(Date bDateCheckIn) {
-        this.bDateCheckIn = bDateCheckIn;
+    public void Booking.setDateCheckIn(Date dateCheckIn) {
+        this.dateCheckIn = dateCheckIn;
     }
     
-    public Date Booking.getBDateCheckOut() {
-        return this.bDateCheckOut;
+    public Date Booking.getDateCheckOut() {
+        return this.dateCheckOut;
     }
     
-    public void Booking.setBDateCheckOut(Date bDateCheckOut) {
-        this.bDateCheckOut = bDateCheckOut;
+    public void Booking.setDateCheckOut(Date dateCheckOut) {
+        this.dateCheckOut = dateCheckOut;
     }
     
-    public String Booking.getBCreditCard() {
-        return this.bCreditCard;
+    public String Booking.getCreditCard() {
+        return this.creditCard;
     }
     
-    public void Booking.setBCreditCard(String bCreditCard) {
-        this.bCreditCard = bCreditCard;
+    public void Booking.setCreditCard(String creditCard) {
+        this.creditCard = creditCard;
     }
     
-    public double Booking.getBPartialBill() {
-        return this.bPartialBill;
+    public double Booking.getPartialBill() {
+        return this.partialBill;
     }
     
-    public void Booking.setBPartialBill(double bPartialBill) {
-        this.bPartialBill = bPartialBill;
+    public void Booking.setPartialBill(double partialBill) {
+        this.partialBill = partialBill;
     }
     
-    public Usuario Booking.getBUser() {
-        return this.bUser;
+    public Usuario Booking.getUser() {
+        return this.user;
     }
     
-    public void Booking.setBUser(Usuario bUser) {
-        this.bUser = bUser;
+    public void Booking.setUser(Usuario user) {
+        this.user = user;
     }
     
-    public Room Booking.getBRoom() {
-        return this.bRoom;
+    public Hotel Booking.getHotel() {
+        return this.hotel;
     }
     
-    public void Booking.setBRoom(Room bRoom) {
-        this.bRoom = bRoom;
+    public void Booking.setHotel(Hotel hotel) {
+        this.hotel = hotel;
     }
     
-    public long Booking.getBDays() {
-        return this.bDays;
+    public Category Booking.getCategory() {
+        return this.category;
     }
     
-    public void Booking.setBDays(long bDays) {
-        this.bDays = bDays;
+    public void Booking.setCategory(Category category) {
+        this.category = category;
     }
     
 }

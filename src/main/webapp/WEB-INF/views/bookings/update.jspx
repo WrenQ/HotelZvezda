@@ -3,15 +3,15 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_iw_zvezdahotels_Booking" modelAttribute="booking" path="/bookings" versionField="Version" z="yQx6Q50j+WeCfurHebZXydzrROM=">
-        <field:input field="bCode" id="c_iw_zvezdahotels_Booking_bCode" required="true" z="0+7pvvqwRpNAFICy+fsJW4gLwZg="/>
-        <field:checkbox field="bWithExtraBed" id="c_iw_zvezdahotels_Booking_bWithExtraBed" z="bcLGoCdQMUQUMCr3vWxJUDhC0zk="/>
-        <field:datetime dateTimePattern="${booking_bdatebooking_date_format}" field="bDateBooking" id="c_iw_zvezdahotels_Booking_bDateBooking" required="true" z="5E1BmCMjXZ5LdA8IfEHEucsHj7w="/>
-        <field:datetime dateTimePattern="${booking_bdatecheckin_date_format}" field="bDateCheckIn" id="c_iw_zvezdahotels_Booking_bDateCheckIn" z="nqRrYP/aRVggOYrafbVFyINHTKI="/>
-        <field:datetime dateTimePattern="${booking_bdatecheckout_date_format}" field="bDateCheckOut" id="c_iw_zvezdahotels_Booking_bDateCheckOut" z="4ZLQYta1tmMpHtpijqbGvCdu2Ks="/>
-        <field:input field="bCreditCard" id="c_iw_zvezdahotels_Booking_bCreditCard" max="16" min="16" required="true" z="dr6N6ugxDvZdQZjMHdqxhdmUaoE="/>
-        <field:input field="bPartialBill" id="c_iw_zvezdahotels_Booking_bPartialBill" required="true" z="pr27WNSi8yC8hYGImczmcp7odj8="/>
-        <field:select field="bUser" id="c_iw_zvezdahotels_Booking_bUser" itemValue="id" items="${usuarios}" path="/usuarios" required="true" z="DskAoIma/ajfaRmrLeyZ3FTTQ9I="/>
-        <field:select field="bRoom" id="c_iw_zvezdahotels_Booking_bRoom" itemValue="id" items="${rooms}" path="/rooms" required="true" z="C4kXfzcjFedwDF4KCCtxHpbS7Jo="/>
-        <field:input field="bDays" id="c_iw_zvezdahotels_Booking_bDays" required="true" z="Lb5PTHHIH2SoNjFxZSOqI7TOub0="/>
+        <field:input field="code" id="c_iw_zvezdahotels_Booking_code" required="true" z="AMHQCLospXxcZ8SZ2Dcw0J7sv2U="/>
+        <field:checkbox field="withExtraBed" id="c_iw_zvezdahotels_Booking_withExtraBed" z="HfKwm+CZ/HxvOj/gXkY6rIVYoFQ="/>
+        <field:datetime dateTimePattern="${booking_datebooking_date_format}" field="dateBooking" id="c_iw_zvezdahotels_Booking_dateBooking" required="true" z="LSuWAlSnPgCtl5e5QB3G1f15asc="/>
+        <field:datetime dateTimePattern="${booking_datecheckin_date_format}" field="dateCheckIn" id="c_iw_zvezdahotels_Booking_dateCheckIn" z="Sr8P9SNnr9IqO8go5j8eEKhM/5c="/>
+        <field:datetime dateTimePattern="${booking_datecheckout_date_format}" field="dateCheckOut" id="c_iw_zvezdahotels_Booking_dateCheckOut" z="AHwgB8p1Q1iFz1DNhejhk5BG3SE="/>
+        <field:input field="creditCard" id="c_iw_zvezdahotels_Booking_creditCard" max="16" min="16" required="true" z="s7Aw3BJ271koMZotfQnFU5U3XZA="/>
+        <field:input field="partialBill" id="c_iw_zvezdahotels_Booking_partialBill" required="true" z="oAYBCxJ8Pbvmaec2CajhUPO433c="/>
+        <field:select field="user" id="c_iw_zvezdahotels_Booking_user" itemValue="id" items="${usuarios}" path="/usuarios" required="true" z="mw29oSkFWd2qgiPw/zM3ycm1Iks="/>
+        <field:select field="hotel" id="c_iw_zvezdahotels_Booking_hotel" itemValue="id" items="${hotels}" path="/hotels" required="true" z="S7cg8LIpo6ekA36egxgsYfIoNlM="/>
+        <field:select field="category" id="c_iw_zvezdahotels_Booking_category" itemValue="id" items="${categorys}" path="/categorys" required="true" z="hTxbb/cyVuHdrSAc8jc/xAmgw0w="/>
     </form:update>
 </div>

@@ -3,12 +3,15 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_iw_zvezdahotels_Usuario" object="${usuario}" path="/usuarios" z="VnA1wvWdr2c6q6sEvs2/KceiHvI=">
-        <field:display field="UFullName" id="s_iw_zvezdahotels_Usuario_uFullName" object="${usuario}" z="zKhIur2oEAXyLL5itOSBoGQX5Ek="/>
-        <field:display field="UEmail" id="s_iw_zvezdahotels_Usuario_uEmail" object="${usuario}" z="YO+Nt86TlDEyYFUwlDKABsRAbHk="/>
-        <field:display field="UUsername" id="s_iw_zvezdahotels_Usuario_uUsername" object="${usuario}" z="N92Q3Ku7V/t0ITXYhUO08/cNIFw="/>
         <field:display field="UPassword" id="s_iw_zvezdahotels_Usuario_uPassword" object="${usuario}" render="false" z="user-managed"/>
-        <field:display date="true" dateTimePattern="${usuario_udateregistration_date_format}" field="UDateRegistration" id="s_iw_zvezdahotels_Usuario_uDateRegistration" object="${usuario}" z="00J3x4MKfnr9ySPV1RD0DjcXugQ="/>
         <field:display field="UEnabled" id="s_iw_zvezdahotels_Usuario_uEnabled" object="${usuario}" render="false" z="user-managed"/>
         <field:display field="URoles" id="s_iw_zvezdahotels_Usuario_uRoles" object="${usuario}" render="false" z="user-managed"/>
+        <field:display field="fullName" id="s_iw_zvezdahotels_Usuario_fullName" object="${usuario}" z="M0LFkKiaWqgn0V6QdJwd8dCr98I="/>
+        <field:display field="email" id="s_iw_zvezdahotels_Usuario_email" object="${usuario}" z="r82WwR5L+P1HAGhpQeMhn8FcbBw="/>
+        <field:display field="username" id="s_iw_zvezdahotels_Usuario_username" object="${usuario}" z="3kMbMQhXxdRNRJP1oUWKKFbPvko="/>
+        <field:display field="password" id="s_iw_zvezdahotels_Usuario_password" object="${usuario}" z="NIEwy9kruRB9cjvbS7NWR3TKuYY="/>
+        <field:display date="true" dateTimePattern="${usuario_dateregistration_date_format}" field="dateRegistration" id="s_iw_zvezdahotels_Usuario_dateRegistration" object="${usuario}" z="ZpGgHYRiKzIEwhRDKbZBta+NLqk="/>
+        <field:display field="enabled" id="s_iw_zvezdahotels_Usuario_enabled" object="${usuario}" z="vKszC6MdC+3B2FpWfOnK+xMOwyU="/>
+        <field:display field="roles" id="s_iw_zvezdahotels_Usuario_roles" object="${usuario}" z="GDFtnenn5wIQs7RM6nkcLJHgmjc="/>
     </page:show>
 </div>

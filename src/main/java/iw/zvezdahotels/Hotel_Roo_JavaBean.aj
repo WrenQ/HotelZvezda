@@ -3,98 +3,116 @@
 
 package iw.zvezdahotels;
 
+import iw.zvezdahotels.Booking;
+import iw.zvezdahotels.Category;
 import iw.zvezdahotels.Hotel;
 import iw.zvezdahotels.Room;
 import java.util.Set;
 
 privileged aspect Hotel_Roo_JavaBean {
     
-    public String Hotel.getHName() {
-        return this.hName;
+    public String Hotel.getName() {
+        return this.name;
     }
     
-    public void Hotel.setHName(String hName) {
-        this.hName = hName;
+    public void Hotel.setName(String name) {
+        this.name = name;
     }
     
-    public String Hotel.getHAddress() {
-        return this.hAddress;
+    public String Hotel.getAddress() {
+        return this.address;
     }
     
-    public void Hotel.setHAddress(String hAddress) {
-        this.hAddress = hAddress;
+    public void Hotel.setAddress(String address) {
+        this.address = address;
     }
     
-    public String Hotel.getHTelephone() {
-        return this.hTelephone;
+    public String Hotel.getTelephone() {
+        return this.telephone;
     }
     
-    public void Hotel.setHTelephone(String hTelephone) {
-        this.hTelephone = hTelephone;
+    public void Hotel.setTelephone(String telephone) {
+        this.telephone = telephone;
     }
     
-    public String Hotel.getHEmail() {
-        return this.hEmail;
+    public String Hotel.getEmail() {
+        return this.email;
     }
     
-    public void Hotel.setHEmail(String hEmail) {
-        this.hEmail = hEmail;
+    public void Hotel.setEmail(String email) {
+        this.email = email;
     }
     
-    public String Hotel.getHWebsite() {
-        return this.hWebsite;
+    public String Hotel.getWebsite() {
+        return this.website;
     }
     
-    public void Hotel.setHWebsite(String hWebsite) {
-        this.hWebsite = hWebsite;
+    public void Hotel.setWebsite(String website) {
+        this.website = website;
     }
     
-    public int Hotel.getHStars() {
-        return this.hStars;
+    public int Hotel.getStars() {
+        return this.stars;
     }
     
-    public void Hotel.setHStars(int hStars) {
-        this.hStars = hStars;
+    public void Hotel.setStars(int stars) {
+        this.stars = stars;
     }
     
-    public double Hotel.getHPricePerSingle() {
-        return this.hPricePerSingle;
+    public double Hotel.getPricePerSingle() {
+        return this.pricePerSingle;
     }
     
-    public void Hotel.setHPricePerSingle(double hPricePerSingle) {
-        this.hPricePerSingle = hPricePerSingle;
+    public void Hotel.setPricePerSingle(double pricePerSingle) {
+        this.pricePerSingle = pricePerSingle;
     }
     
-    public double Hotel.getHPricePerDouble() {
-        return this.hPricePerDouble;
+    public double Hotel.getPricePerDouble() {
+        return this.pricePerDouble;
     }
     
-    public void Hotel.setHPricePerDouble(double hPricePerDouble) {
-        this.hPricePerDouble = hPricePerDouble;
+    public void Hotel.setPricePerDouble(double pricePerDouble) {
+        this.pricePerDouble = pricePerDouble;
     }
     
-    public double Hotel.getHPricePerExtraBed() {
-        return this.hPricePerExtraBed;
+    public double Hotel.getPricePerExtraBed() {
+        return this.pricePerExtraBed;
     }
     
-    public void Hotel.setHPricePerExtraBed(double hPricePerExtraBed) {
-        this.hPricePerExtraBed = hPricePerExtraBed;
+    public void Hotel.setPricePerExtraBed(double pricePerExtraBed) {
+        this.pricePerExtraBed = pricePerExtraBed;
     }
     
-    public int Hotel.getHMaxStayingDays() {
-        return this.hMaxStayingDays;
+    public int Hotel.getMaxStayingDays() {
+        return this.maxStayingDays;
     }
     
-    public void Hotel.setHMaxStayingDays(int hMaxStayingDays) {
-        this.hMaxStayingDays = hMaxStayingDays;
+    public void Hotel.setMaxStayingDays(int maxStayingDays) {
+        this.maxStayingDays = maxStayingDays;
     }
     
-    public Set<Room> Hotel.getHRooms() {
-        return this.hRooms;
+    public Set<Room> Hotel.getRooms() {
+        return this.rooms;
     }
     
-    public void Hotel.setHRooms(Set<Room> hRooms) {
-        this.hRooms = hRooms;
+    public void Hotel.setRooms(Set<Room> rooms) {
+        this.rooms = rooms;
+    }
+    
+    public Set<Booking> Hotel.getBookings() {
+        return this.bookings;
+    }
+    
+    public void Hotel.setBookings(Set<Booking> bookings) {
+        this.bookings = bookings;
+    }
+    
+    public Set<Category> Hotel.getCategories() {
+        return this.categories;
+    }
+    
+    public void Hotel.setCategories(Set<Category> categories) {
+        this.categories = categories;
     }
     
 }

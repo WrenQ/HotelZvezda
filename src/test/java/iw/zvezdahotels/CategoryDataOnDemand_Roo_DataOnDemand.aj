@@ -5,6 +5,7 @@ package iw.zvezdahotels;
 
 import iw.zvezdahotels.Category;
 import iw.zvezdahotels.CategoryDataOnDemand;
+import iw.zvezdahotels.Hotel;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -24,25 +25,31 @@ privileged aspect CategoryDataOnDemand_Roo_DataOnDemand {
     
     public Category CategoryDataOnDemand.getNewTransientCategory(int index) {
         Category obj = new Category();
-        setCDescription(obj, index);
-        setCName(obj, index);
-        setCPriceFactor(obj, index);
+        setDescription(obj, index);
+        setHotel(obj, index);
+        setName(obj, index);
+        setPriceFactor(obj, index);
         return obj;
     }
     
-    public void CategoryDataOnDemand.setCDescription(Category obj, int index) {
-        String cDescription = "cDescription_" + index;
-        obj.setCDescription(cDescription);
+    public void CategoryDataOnDemand.setDescription(Category obj, int index) {
+        String description = "description_" + index;
+        obj.setDescription(description);
     }
     
-    public void CategoryDataOnDemand.setCName(Category obj, int index) {
-        String cName = "cName_" + index;
-        obj.setCName(cName);
+    public void CategoryDataOnDemand.setHotel(Category obj, int index) {
+        Hotel hotel = null;
+        obj.setHotel(hotel);
     }
     
-    public void CategoryDataOnDemand.setCPriceFactor(Category obj, int index) {
-        double cPriceFactor = new Integer(index).doubleValue();
-        obj.setCPriceFactor(cPriceFactor);
+    public void CategoryDataOnDemand.setName(Category obj, int index) {
+        String name = "name_" + index;
+        obj.setName(name);
+    }
+    
+    public void CategoryDataOnDemand.setPriceFactor(Category obj, int index) {
+        double priceFactor = new Integer(index).doubleValue();
+        obj.setPriceFactor(priceFactor);
     }
     
     public Category CategoryDataOnDemand.getSpecificCategory(int index) {

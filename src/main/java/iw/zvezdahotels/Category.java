@@ -18,20 +18,21 @@ public class Category {
     /**
      */
     @NotNull
-    private String cName;
+    private String name;
 
     /**
      */
     @NotNull
-    private String cDescription;
+    private String description;
 
     /**
      */
     @NotNull
-    private double cPriceFactor;
-
+    private double priceFactor;
+    
     /**
      */
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "rCategory")
-    private Set<Room> cRooms = new HashSet<Room>();
+    @NotNull
+    private Hotel hotel;
+
 }

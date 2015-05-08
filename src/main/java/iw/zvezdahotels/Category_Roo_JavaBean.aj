@@ -4,41 +4,40 @@
 package iw.zvezdahotels;
 
 import iw.zvezdahotels.Category;
-import iw.zvezdahotels.Room;
-import java.util.Set;
+import iw.zvezdahotels.Hotel;
 
 privileged aspect Category_Roo_JavaBean {
     
-    public String Category.getCName() {
-        return this.cName;
+    public String Category.getName() {
+        return this.name;
     }
     
-    public void Category.setCName(String cName) {
-        this.cName = cName;
+    public void Category.setName(String name) {
+        this.name = name;
     }
     
-    public String Category.getCDescription() {
-        return this.cDescription;
+    public String Category.getDescription() {
+        return this.description;
     }
     
-    public void Category.setCDescription(String cDescription) {
-        this.cDescription = cDescription;
+    public void Category.setDescription(String description) {
+        this.description = description;
     }
     
-    public double Category.getCPriceFactor() {
-        return this.cPriceFactor;
+    public double Category.getPriceFactor() {
+        return this.priceFactor;
     }
     
-    public void Category.setCPriceFactor(double cPriceFactor) {
-        this.cPriceFactor = cPriceFactor;
+    public void Category.setPriceFactor(double priceFactor) {
+        this.priceFactor = priceFactor;
     }
     
-    public Set<Room> Category.getCRooms() {
-        return this.cRooms;
+    public Hotel Category.getHotel() {
+        return this.hotel;
     }
     
-    public void Category.setCRooms(Set<Room> cRooms) {
-        this.cRooms = cRooms;
+    public void Category.setHotel(Hotel hotel) {
+        this.hotel = hotel;
     }
     
 }

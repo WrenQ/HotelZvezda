@@ -4,11 +4,13 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_iw_zvezdahotels_Usuario" items="${usuarios}" z="MBqEVabJgRGV0YAu+Nv54/PFyHE=">
         <table:table data="${usuarios}" id="l_iw_zvezdahotels_Usuario" path="/usuarios" z="QiQiKpTPynudaJvRTIjCPymejNM=">
-            <table:column id="c_iw_zvezdahotels_Usuario_uFullName" property="UFullName" z="MLC2d5NjQDnlynB4HaQQAqO69jk="/>
-            <table:column id="c_iw_zvezdahotels_Usuario_uEmail" property="UEmail" z="2b+bj90nDTdS90uNoSRBlsCrblE="/>
-            <table:column id="c_iw_zvezdahotels_Usuario_uUsername" property="UUsername" z="mKz4VVgdw329KZIDk08vyJQclww="/>
             <table:column id="c_iw_zvezdahotels_Usuario_uPassword" property="UPassword" render="false" z="user-managed"/>
-            <table:column date="true" dateTimePattern="${usuario_udateregistration_date_format}" id="c_iw_zvezdahotels_Usuario_uDateRegistration" property="UDateRegistration" z="krxLikF7SIqHG3uK/ZxdjE2KZuA="/>
+            <table:column id="c_iw_zvezdahotels_Usuario_fullName" property="fullName" z="WhdgEA9MTRvBBp8IdDd/GY97/SQ="/>
+            <table:column id="c_iw_zvezdahotels_Usuario_email" property="email" z="U0XCOPYpjpu7xHEMSLe14yYJZ34="/>
+            <table:column id="c_iw_zvezdahotels_Usuario_username" property="username" z="cZMpsYygl6xovjp17JwPXtZ89To="/>
+            <table:column id="c_iw_zvezdahotels_Usuario_password" property="password" z="mBzswO8sYF/2ZjFyHzZeSKDi5gM="/>
+            <table:column date="true" dateTimePattern="${usuario_dateregistration_date_format}" id="c_iw_zvezdahotels_Usuario_dateRegistration" property="dateRegistration" z="/W6+KY2B0majin3JfGy6HOOul98="/>
+            <table:column id="c_iw_zvezdahotels_Usuario_enabled" property="enabled" z="Vc03NDRkh5c5epTvD/QPsHGISv4="/>
         </table:table>
     </page:list>
 </div>

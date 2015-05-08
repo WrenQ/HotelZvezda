@@ -3,17 +3,19 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_iw_zvezdahotels_Hotel" modelAttribute="hotel" path="/hotels" render="${empty dependencies}" z="oJBwtve/zM/SiA9Sbjpn6MuQ4UI=">
-        <field:input field="hName" id="c_iw_zvezdahotels_Hotel_hName" required="true" z="jV0fG38jZOEqqFYMtfFGcGqikrM="/>
-        <field:input field="hAddress" id="c_iw_zvezdahotels_Hotel_hAddress" required="true" z="RQrUXsRduvHE8vpQbLQw8DinPLo="/>
-        <field:input field="hTelephone" id="c_iw_zvezdahotels_Hotel_hTelephone" required="true" z="DIEsAyTNOUqni01/2FjF3Edy4e4="/>
-        <field:input field="hEmail" id="c_iw_zvezdahotels_Hotel_hEmail" z="CssJ+JXOiPXXWLiuMGsnPHqGTg0="/>
-        <field:input field="hWebsite" id="c_iw_zvezdahotels_Hotel_hWebsite" z="/HLErbgNmcnNQMIMHFGIJPbYsYA="/>
-        <field:input field="hStars" id="c_iw_zvezdahotels_Hotel_hStars" required="true" z="O2PwnWGGTegGE83fukzsimrn+5w="/>
-        <field:input field="hPricePerSingle" id="c_iw_zvezdahotels_Hotel_hPricePerSingle" required="true" z="nC72wJFi8morlKT2ybG4IBfDXHA="/>
-        <field:input field="hPricePerDouble" id="c_iw_zvezdahotels_Hotel_hPricePerDouble" required="true" z="EimwJNvD994ofiyoG5urD9kQg00="/>
-        <field:input field="hMaxStayingDays" id="c_iw_zvezdahotels_Hotel_hMaxStayingDays" required="true" z="232wMvjHKbueoqbBVFHsRTJp+Sc="/>
-        <field:simple field="hRooms" id="c_iw_zvezdahotels_Hotel_hRooms" messageCode="entity_reference_not_managed" messageCodeAttribute="Room" z="Q7KRNM88qZbodQyPjpZWnaVQXDE="/>
-        <field:input field="hPricePerExtraBed" id="c_iw_zvezdahotels_Hotel_hPricePerExtraBed" required="true" z="gSVU8S0jN8mdlxMj88t3IjkFsLs="/>
+        <field:input field="name" id="c_iw_zvezdahotels_Hotel_name" required="true" z="4Dh+sjOlCZFtijTKpjBqIsdBW+Y="/>
+        <field:input field="address" id="c_iw_zvezdahotels_Hotel_address" required="true" z="5gxY9dLjCnsduQxIFwm/U6+J4V0="/>
+        <field:input field="telephone" id="c_iw_zvezdahotels_Hotel_telephone" required="true" z="W5G7urqiqSBrlTHkfjd+2AGwVjE="/>
+        <field:input field="email" id="c_iw_zvezdahotels_Hotel_email" validationMessageCode="field_invalid_email" z="vKZY+xUs6Z8laJtMhOJlFhGNoDo="/>
+        <field:input field="website" id="c_iw_zvezdahotels_Hotel_website" z="tRyXRqU0nHZe1ZB40XT5pnscdyk="/>
+        <field:input field="stars" id="c_iw_zvezdahotels_Hotel_stars" required="true" z="5jltjC0sqRMporNVvz169l3++eo="/>
+        <field:input field="pricePerSingle" id="c_iw_zvezdahotels_Hotel_pricePerSingle" required="true" z="PKSSbsGcoQ4K+XmnhRBLUAouh4g="/>
+        <field:input field="pricePerDouble" id="c_iw_zvezdahotels_Hotel_pricePerDouble" required="true" z="sB+YvywdAmjdziCftR0pskrhqGU="/>
+        <field:input field="pricePerExtraBed" id="c_iw_zvezdahotels_Hotel_pricePerExtraBed" required="true" z="erjfshCl6uAbxgpAKqob+CI8738="/>
+        <field:input field="maxStayingDays" id="c_iw_zvezdahotels_Hotel_maxStayingDays" required="true" z="p0t+atFi1sg/cSEdBOeamFpD2aI="/>
+        <field:simple field="rooms" id="c_iw_zvezdahotels_Hotel_rooms" messageCode="entity_reference_not_managed" messageCodeAttribute="Room" z="ZjLdfpc7sWL3k2LgTIkrvpYy7EU="/>
+        <field:simple field="bookings" id="c_iw_zvezdahotels_Hotel_bookings" messageCode="entity_reference_not_managed" messageCodeAttribute="Booking" z="uIPOjxNO/BnQEKm5+ff19Ds4RkA="/>
+        <field:simple field="categories" id="c_iw_zvezdahotels_Hotel_categories" messageCode="entity_reference_not_managed" messageCodeAttribute="Category" z="dTrpEXcl0RcKeglOj2g2zQZVkp4="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_iw_zvezdahotels_Hotel" render="${not empty dependencies}" z="pwMoD6Zhj05r3FaH6dhCxSyXJcU="/>
 </div>

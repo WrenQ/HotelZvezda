@@ -26,45 +26,40 @@ public class Usuario {
     /**
      */
     @NotNull
-    private String uFullName;
+    private String fullName;
 
     /**
      */
     @NotNull
-    private String uEmail;
+    private String email;
 
     /**
      */
     @NotNull
     @Size(min = 6)
-    private String uUsername;
+    private String username;
 
     /**
      */
     @NotNull
     @Size(min = 8)
-    private String uPassword;
+    private String password;
 
     /**
      */
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(pattern = "dd-MM-yyyy hh:mm:ss")
-    private Date uDateRegistration;
-
-    /**
-     */
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "bUser")
-    private Set<Booking> uBookings = new HashSet<Booking>();
+    private Date dateRegistration;
 
     /**
      */
     @NotNull
-    private Boolean uEnabled;
+    private Boolean enabled;
 
     /**
      */
     @NotNull
     @ManyToMany(cascade = CascadeType.ALL)
-    private Set<UserRole> uRoles = new HashSet<UserRole>();
+    private Set<UserRole> roles = new HashSet<UserRole>();
 }

@@ -4,7 +4,6 @@
 package iw.zvezdahotels.web;
 
 import iw.zvezdahotels.Booking;
-import iw.zvezdahotels.Room;
 import iw.zvezdahotels.web.BookingController;
 import java.util.Date;
 import java.util.List;
@@ -112,25 +111,13 @@ privileged aspect BookingController_Roo_Controller_Json {
         }
     }
     
-    @RequestMapping(params = "find=ByBDateBookingBetween", headers = "Accept=application/json")
+    @RequestMapping(params = "find=ByDateBookingBetween", headers = "Accept=application/json")
     @ResponseBody
-    public ResponseEntity<String> BookingController.jsonFindBookingsByBDateBookingBetween(@RequestParam("minBDateBooking") @DateTimeFormat(pattern = "dd-MM-yyyy hh:mm:ss") Date minBDateBooking, @RequestParam("maxBDateBooking") @DateTimeFormat(pattern = "dd-MM-yyyy hh:mm:ss") Date maxBDateBooking) {
+    public ResponseEntity<String> BookingController.jsonFindBookingsByDateBookingBetween(@RequestParam("minDateBooking") @DateTimeFormat(pattern = "dd-MM-yyyy hh:mm:ss") Date minDateBooking, @RequestParam("maxDateBooking") @DateTimeFormat(pattern = "dd-MM-yyyy hh:mm:ss") Date maxDateBooking) {
         HttpHeaders headers = new HttpHeaders();
         try {
             headers.add("Content-Type", "application/json; charset=utf-8");
-            return new ResponseEntity<String>(Booking.toJsonArray(Booking.findBookingsByBDateBookingBetween(minBDateBooking, maxBDateBooking).getResultList()), headers, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-    
-    @RequestMapping(params = "find=ByBRoom", headers = "Accept=application/json")
-    @ResponseBody
-    public ResponseEntity<String> BookingController.jsonFindBookingsByBRoom(@RequestParam("bRoom") Room bRoom) {
-        HttpHeaders headers = new HttpHeaders();
-        try {
-            headers.add("Content-Type", "application/json; charset=utf-8");
-            return new ResponseEntity<String>(Booking.toJsonArray(Booking.findBookingsByBRoom(bRoom).getResultList()), headers, HttpStatus.OK);
+            return new ResponseEntity<String>(Booking.toJsonArray(Booking.findBookingsByDateBookingBetween(minDateBooking, maxDateBooking).getResultList()), headers, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("{\"ERROR\":"+e.getMessage()+"\"}", headers, HttpStatus.INTERNAL_SERVER_ERROR);
         }

@@ -35,14 +35,14 @@ public class HotelController {
 			@RequestParam(required = false, defaultValue = "false") Boolean extraBed, Model uiModel){
 		Long availableRoomsN = Hotel.findHotelsByAvailableRooms(hotelId, categoryId, roomType).getSingleResult();
 		if(availableRoomsN > 0){
-			uiModel.addAttribute("category", Category.findCategory(categoryId).getCName());
+			uiModel.addAttribute("category", Category.findCategory(categoryId).getName());
 			uiModel.addAttribute("roomtype", roomType.name());
 			uiModel.addAttribute("availableRooms", availableRoomsN);
 		} else if (roomType.name().equals("SINGLE")){
 			Long availableRoomsN2 = Hotel.findHotelsByAvailableRooms(hotelId, categoryId, RoomType.DOBLE).getSingleResult();
 			if(availableRoomsN2 > 0){
 				uiModel.addAttribute("doubleAvailable", true);
-				uiModel.addAttribute("category", Category.findCategory(categoryId).getCName());
+				uiModel.addAttribute("category", Category.findCategory(categoryId).getName());
 				uiModel.addAttribute("roomtype", roomType.name());
 				uiModel.addAttribute("roomTypeAlt", RoomType.DOBLE.name());
 				uiModel.addAttribute("availableRooms", availableRoomsN2);
@@ -54,16 +54,7 @@ public class HotelController {
 	}
 	
 	public double getPricefromBooking(Booking booking) {
-        double price = 0;
-        double categoryFactor = booking.getBRoom().getRCategory().getCPriceFactor();
-        Hotel hotelBooking = booking.getBRoom().getRHotel();
-        if (booking.getBRoom().getRType() == RoomType.SINGLE)
-        	price = booking.getBDays() * (hotelBooking.getHPricePerSingle() * categoryFactor);
-        else 
-        	price = booking.getBDays() * (hotelBooking.getHPricePerDouble() * categoryFactor);
-        if(booking.getBWithExtraBed())
-        	price += hotelBooking.getHPricePerExtraBed();
-        return price;
+       return 9.0;
     }
 	
 	

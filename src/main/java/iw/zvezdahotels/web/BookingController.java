@@ -23,7 +23,6 @@ public class BookingController {
             return "bookings/create";
         }
         uiModel.asMap().clear();
-        booking.setBDays((booking.getBDateCheckOut().getTime() - booking.getBDateCheckIn().getTime()) / 86400000);
         booking.persist();
         return "redirect:/bookings/" + encodeUrlPathSegment(booking.getId().toString(), httpServletRequest);
     }

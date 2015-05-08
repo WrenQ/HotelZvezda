@@ -4,46 +4,37 @@
 package iw.zvezdahotels;
 
 import iw.zvezdahotels.Booking;
-import iw.zvezdahotels.Room;
 import java.util.Date;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
 privileged aspect Booking_Roo_Finder {
     
-    public static Long Booking.countFindBookingsByBDateBookingBetween(Date minBDateBooking, Date maxBDateBooking) {
-        if (minBDateBooking == null) throw new IllegalArgumentException("The minBDateBooking argument is required");
-        if (maxBDateBooking == null) throw new IllegalArgumentException("The maxBDateBooking argument is required");
+    public static Long Booking.countFindBookingsByDateBookingBetween(Date minDateBooking, Date maxDateBooking) {
+        if (minDateBooking == null) throw new IllegalArgumentException("The minDateBooking argument is required");
+        if (maxDateBooking == null) throw new IllegalArgumentException("The maxDateBooking argument is required");
         EntityManager em = Booking.entityManager();
-        TypedQuery q = em.createQuery("SELECT COUNT(o) FROM Booking AS o WHERE o.bDateBooking BETWEEN :minBDateBooking AND :maxBDateBooking", Long.class);
-        q.setParameter("minBDateBooking", minBDateBooking);
-        q.setParameter("maxBDateBooking", maxBDateBooking);
+        TypedQuery q = em.createQuery("SELECT COUNT(o) FROM Booking AS o WHERE o.dateBooking BETWEEN :minDateBooking AND :maxDateBooking", Long.class);
+        q.setParameter("minDateBooking", minDateBooking);
+        q.setParameter("maxDateBooking", maxDateBooking);
         return ((Long) q.getSingleResult());
     }
     
-    public static Long Booking.countFindBookingsByBRoom(Room bRoom) {
-        if (bRoom == null) throw new IllegalArgumentException("The bRoom argument is required");
+    public static TypedQuery<Booking> Booking.findBookingsByDateBookingBetween(Date minDateBooking, Date maxDateBooking) {
+        if (minDateBooking == null) throw new IllegalArgumentException("The minDateBooking argument is required");
+        if (maxDateBooking == null) throw new IllegalArgumentException("The maxDateBooking argument is required");
         EntityManager em = Booking.entityManager();
-        TypedQuery q = em.createQuery("SELECT COUNT(o) FROM Booking AS o WHERE o.bRoom = :bRoom", Long.class);
-        q.setParameter("bRoom", bRoom);
-        return ((Long) q.getSingleResult());
-    }
-    
-    public static TypedQuery<Booking> Booking.findBookingsByBDateBookingBetween(Date minBDateBooking, Date maxBDateBooking) {
-        if (minBDateBooking == null) throw new IllegalArgumentException("The minBDateBooking argument is required");
-        if (maxBDateBooking == null) throw new IllegalArgumentException("The maxBDateBooking argument is required");
-        EntityManager em = Booking.entityManager();
-        TypedQuery<Booking> q = em.createQuery("SELECT o FROM Booking AS o WHERE o.bDateBooking BETWEEN :minBDateBooking AND :maxBDateBooking", Booking.class);
-        q.setParameter("minBDateBooking", minBDateBooking);
-        q.setParameter("maxBDateBooking", maxBDateBooking);
+        TypedQuery<Booking> q = em.createQuery("SELECT o FROM Booking AS o WHERE o.dateBooking BETWEEN :minDateBooking AND :maxDateBooking", Booking.class);
+        q.setParameter("minDateBooking", minDateBooking);
+        q.setParameter("maxDateBooking", maxDateBooking);
         return q;
     }
     
-    public static TypedQuery<Booking> Booking.findBookingsByBDateBookingBetween(Date minBDateBooking, Date maxBDateBooking, String sortFieldName, String sortOrder) {
-        if (minBDateBooking == null) throw new IllegalArgumentException("The minBDateBooking argument is required");
-        if (maxBDateBooking == null) throw new IllegalArgumentException("The maxBDateBooking argument is required");
+    public static TypedQuery<Booking> Booking.findBookingsByDateBookingBetween(Date minDateBooking, Date maxDateBooking, String sortFieldName, String sortOrder) {
+        if (minDateBooking == null) throw new IllegalArgumentException("The minDateBooking argument is required");
+        if (maxDateBooking == null) throw new IllegalArgumentException("The maxDateBooking argument is required");
         EntityManager em = Booking.entityManager();
-        StringBuilder queryBuilder = new StringBuilder("SELECT o FROM Booking AS o WHERE o.bDateBooking BETWEEN :minBDateBooking AND :maxBDateBooking");
+        StringBuilder queryBuilder = new StringBuilder("SELECT o FROM Booking AS o WHERE o.dateBooking BETWEEN :minDateBooking AND :maxDateBooking");
         if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
             queryBuilder.append(" ORDER BY ").append(sortFieldName);
             if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
@@ -51,31 +42,8 @@ privileged aspect Booking_Roo_Finder {
             }
         }
         TypedQuery<Booking> q = em.createQuery(queryBuilder.toString(), Booking.class);
-        q.setParameter("minBDateBooking", minBDateBooking);
-        q.setParameter("maxBDateBooking", maxBDateBooking);
-        return q;
-    }
-    
-    public static TypedQuery<Booking> Booking.findBookingsByBRoom(Room bRoom) {
-        if (bRoom == null) throw new IllegalArgumentException("The bRoom argument is required");
-        EntityManager em = Booking.entityManager();
-        TypedQuery<Booking> q = em.createQuery("SELECT o FROM Booking AS o WHERE o.bRoom = :bRoom", Booking.class);
-        q.setParameter("bRoom", bRoom);
-        return q;
-    }
-    
-    public static TypedQuery<Booking> Booking.findBookingsByBRoom(Room bRoom, String sortFieldName, String sortOrder) {
-        if (bRoom == null) throw new IllegalArgumentException("The bRoom argument is required");
-        EntityManager em = Booking.entityManager();
-        StringBuilder queryBuilder = new StringBuilder("SELECT o FROM Booking AS o WHERE o.bRoom = :bRoom");
-        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
-            queryBuilder.append(" ORDER BY ").append(sortFieldName);
-            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
-                queryBuilder.append(" ").append(sortOrder);
-            }
-        }
-        TypedQuery<Booking> q = em.createQuery(queryBuilder.toString(), Booking.class);
-        q.setParameter("bRoom", bRoom);
+        q.setParameter("minDateBooking", minDateBooking);
+        q.setParameter("maxDateBooking", maxDateBooking);
         return q;
     }
     

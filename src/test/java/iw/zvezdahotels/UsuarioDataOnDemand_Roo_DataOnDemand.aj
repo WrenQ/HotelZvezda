@@ -27,43 +27,43 @@ privileged aspect UsuarioDataOnDemand_Roo_DataOnDemand {
     
     public Usuario UsuarioDataOnDemand.getNewTransientUsuario(int index) {
         Usuario obj = new Usuario();
-        setUDateRegistration(obj, index);
-        setUEmail(obj, index);
-        setUEnabled(obj, index);
-        setUFullName(obj, index);
-        setUPassword(obj, index);
-        setUUsername(obj, index);
+        setDateRegistration(obj, index);
+        setEmail(obj, index);
+        setEnabled(obj, index);
+        setFullName(obj, index);
+        setPassword(obj, index);
+        setUsername(obj, index);
         return obj;
     }
     
-    public void UsuarioDataOnDemand.setUDateRegistration(Usuario obj, int index) {
-        Date uDateRegistration = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
-        obj.setUDateRegistration(uDateRegistration);
+    public void UsuarioDataOnDemand.setDateRegistration(Usuario obj, int index) {
+        Date dateRegistration = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
+        obj.setDateRegistration(dateRegistration);
     }
     
-    public void UsuarioDataOnDemand.setUEmail(Usuario obj, int index) {
-        String uEmail = "foo" + index + "@bar.com";
-        obj.setUEmail(uEmail);
+    public void UsuarioDataOnDemand.setEmail(Usuario obj, int index) {
+        String email = "foo" + index + "@bar.com";
+        obj.setEmail(email);
     }
     
-    public void UsuarioDataOnDemand.setUEnabled(Usuario obj, int index) {
-        Boolean uEnabled = Boolean.TRUE;
-        obj.setUEnabled(uEnabled);
+    public void UsuarioDataOnDemand.setEnabled(Usuario obj, int index) {
+        Boolean enabled = Boolean.TRUE;
+        obj.setEnabled(enabled);
     }
     
-    public void UsuarioDataOnDemand.setUFullName(Usuario obj, int index) {
-        String uFullName = "uFullName_" + index;
-        obj.setUFullName(uFullName);
+    public void UsuarioDataOnDemand.setFullName(Usuario obj, int index) {
+        String fullName = "fullName_" + index;
+        obj.setFullName(fullName);
     }
     
-    public void UsuarioDataOnDemand.setUPassword(Usuario obj, int index) {
-        String uPassword = "uPassword_" + index;
-        obj.setUPassword(uPassword);
+    public void UsuarioDataOnDemand.setPassword(Usuario obj, int index) {
+        String password = "password_" + index;
+        obj.setPassword(password);
     }
     
-    public void UsuarioDataOnDemand.setUUsername(Usuario obj, int index) {
-        String uUsername = "uUsername_" + index;
-        obj.setUUsername(uUsername);
+    public void UsuarioDataOnDemand.setUsername(Usuario obj, int index) {
+        String username = "username_" + index;
+        obj.setUsername(username);
     }
     
     public Usuario UsuarioDataOnDemand.getSpecificUsuario(int index) {

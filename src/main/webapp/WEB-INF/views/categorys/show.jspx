@@ -3,8 +3,9 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_iw_zvezdahotels_Category" object="${category}" path="/categorys" z="+6d4GpOSbBOhoZNSIMnIsVVgFTI=">
-        <field:display field="CName" id="s_iw_zvezdahotels_Category_cName" object="${category}" z="6lFUFf4+zH732RMdfNJQiQZail4="/>
-        <field:display field="CDescription" id="s_iw_zvezdahotels_Category_cDescription" object="${category}" z="XHDngAKSg3Z9MBcD9Jkrf1iC71Q="/>
-        <field:display field="CPriceFactor" id="s_iw_zvezdahotels_Category_cPriceFactor" object="${category}" z="HiRlR5QgEdba6/bzOP2ahXHIfQA="/>
+        <field:display field="name" id="s_iw_zvezdahotels_Category_name" object="${category}" z="CTcU8MtBAE1eegk+Hr2T2QcWzD4="/>
+        <field:display field="description" id="s_iw_zvezdahotels_Category_description" object="${category}" z="/Bq9WySFOwZr7WskonnpV9wyaNg="/>
+        <field:display field="priceFactor" id="s_iw_zvezdahotels_Category_priceFactor" object="${category}" z="rjYCXWGajdD+2dae1MNpV6r/DzI="/>
+        <field:display field="hotel" id="s_iw_zvezdahotels_Category_hotel" object="${category}" z="mGc6h24NS6ZDmAGGtAVDrtubI3w="/>
     </page:show>
 </div>

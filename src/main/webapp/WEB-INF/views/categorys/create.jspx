@@ -3,10 +3,10 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_iw_zvezdahotels_Category" modelAttribute="category" path="/categorys" render="${empty dependencies}" z="t0Cv1x42tXtBXCwR8YzNMrRPNsk=">
-        <field:input field="cName" id="c_iw_zvezdahotels_Category_cName" required="true" z="4HonK+663dxVHeJr38wU6MdzqYY="/>
-        <field:input field="cDescription" id="c_iw_zvezdahotels_Category_cDescription" required="true" z="qHgQGWpRFAIewxYyMaKxAgVEs3s="/>
-        <field:input field="cPriceFactor" id="c_iw_zvezdahotels_Category_cPriceFactor" required="true" z="iaa048g5Qne532iFz9XEOLKJjOE="/>
-        <field:simple field="cRooms" id="c_iw_zvezdahotels_Category_cRooms" messageCode="entity_reference_not_managed" messageCodeAttribute="Room" z="VwHOjhwd8X7IUbUUOBU8oLdLi1k="/>
+        <field:input field="name" id="c_iw_zvezdahotels_Category_name" required="true" z="oZuXbBlLhsRkOfl4AwjIj71sUNY="/>
+        <field:input field="description" id="c_iw_zvezdahotels_Category_description" required="true" z="DYX/XQoMYLKbNSGSCG7X8QzUHUg="/>
+        <field:input field="priceFactor" id="c_iw_zvezdahotels_Category_priceFactor" required="true" z="Yq/ZFq3U+KvpBFUHlbsftPyixqs="/>
+        <field:input field="hotel" id="c_iw_zvezdahotels_Category_hotel" required="true" z="9jXqZC6vPJeOPRxUr5clXIv7NpY="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_iw_zvezdahotels_Category" render="${not empty dependencies}" z="xJjx3l+jXOXmp89tY2A0DrLqlp8="/>
 </div>

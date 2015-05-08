@@ -3,15 +3,15 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_iw_zvezdahotels_Booking" object="${booking}" path="/bookings" z="PQ/UeUO2rfSTfvgvkV88mn8/hnw=">
-        <field:display field="BCode" id="s_iw_zvezdahotels_Booking_bCode" object="${booking}" z="c9NJAqh8ZtRobQylm1Q3zZwlTxM="/>
-        <field:display field="BWithExtraBed" id="s_iw_zvezdahotels_Booking_bWithExtraBed" object="${booking}" z="xX/WsmAiKcmCYeIqgOlaVGM0Dyk="/>
-        <field:display date="true" dateTimePattern="${booking_bdatebooking_date_format}" field="BDateBooking" id="s_iw_zvezdahotels_Booking_bDateBooking" object="${booking}" z="RHGXGbQacsaENZJPAbYArhwHmRc="/>
-        <field:display date="true" dateTimePattern="${booking_bdatecheckin_date_format}" field="BDateCheckIn" id="s_iw_zvezdahotels_Booking_bDateCheckIn" object="${booking}" z="QpXfiYyz/Da7VRCZDScZVS4wW2A="/>
-        <field:display date="true" dateTimePattern="${booking_bdatecheckout_date_format}" field="BDateCheckOut" id="s_iw_zvezdahotels_Booking_bDateCheckOut" object="${booking}" z="UiMyzIxdm9gY5b6o/UjUVfQakNg="/>
-        <field:display field="BCreditCard" id="s_iw_zvezdahotels_Booking_bCreditCard" object="${booking}" z="b8DzingtASfEVgy8EHIRr9oMTkM="/>
-        <field:display field="BPartialBill" id="s_iw_zvezdahotels_Booking_bPartialBill" object="${booking}" z="ZJsdjHGGd1yP7RWOx+np8S50dwc="/>
-        <field:display field="BUser" id="s_iw_zvezdahotels_Booking_bUser" object="${booking}" z="bPIvWH/lfeH/cNbdRU93nvb/LUE="/>
-        <field:display field="BRoom" id="s_iw_zvezdahotels_Booking_bRoom" object="${booking}" z="iq739/fPnSAil14UCqYL5nxceLA="/>
-        <field:display field="BDays" id="s_iw_zvezdahotels_Booking_bDays" object="${booking}" z="bT13O35yUfEAG60ZBHtSoWn7TMw="/>
+        <field:display field="code" id="s_iw_zvezdahotels_Booking_code" object="${booking}" z="Ka1Tav+OXgNMaPSnK1F5wgVRCpE="/>
+        <field:display field="withExtraBed" id="s_iw_zvezdahotels_Booking_withExtraBed" object="${booking}" z="QM/eljRZIPzRCxO5ecA7c5lZico="/>
+        <field:display date="true" dateTimePattern="${booking_datebooking_date_format}" field="dateBooking" id="s_iw_zvezdahotels_Booking_dateBooking" object="${booking}" z="uinxV5yUMsGjkw8bKuy2Fn/1B74="/>
+        <field:display date="true" dateTimePattern="${booking_datecheckin_date_format}" field="dateCheckIn" id="s_iw_zvezdahotels_Booking_dateCheckIn" object="${booking}" z="ixLA5RsS/1iWvuhK79WN/KVhDo4="/>
+        <field:display date="true" dateTimePattern="${booking_datecheckout_date_format}" field="dateCheckOut" id="s_iw_zvezdahotels_Booking_dateCheckOut" object="${booking}" z="/LPaGXbX28FSUOYWVmqUZO6rhlE="/>
+        <field:display field="creditCard" id="s_iw_zvezdahotels_Booking_creditCard" object="${booking}" z="uqOEg+iodnEHhpYB7XbJ8HR4jAw="/>
+        <field:display field="partialBill" id="s_iw_zvezdahotels_Booking_partialBill" object="${booking}" z="IVFiiXbl79fgL9/KEv4CbtMX64M="/>
+        <field:display field="user" id="s_iw_zvezdahotels_Booking_user" object="${booking}" z="8WqSishYnZEmaZFrAF7ScHGwHKI="/>
+        <field:display field="hotel" id="s_iw_zvezdahotels_Booking_hotel" object="${booking}" z="1+EOi1d2rP8HkIHYE7fMWyDqg7E="/>
+        <field:display field="category" id="s_iw_zvezdahotels_Booking_category" object="${booking}" z="u9pawlZP3KJ/zZxt+uAWYPU/Y3o="/>
     </page:show>
 </div>

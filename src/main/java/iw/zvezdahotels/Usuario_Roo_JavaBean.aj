@@ -3,7 +3,6 @@
 
 package iw.zvezdahotels;
 
-import iw.zvezdahotels.Booking;
 import iw.zvezdahotels.Usuario;
 import iw.zvezdahotels.usuario.UserRole;
 import java.util.Date;
@@ -11,68 +10,60 @@ import java.util.Set;
 
 privileged aspect Usuario_Roo_JavaBean {
     
-    public String Usuario.getUFullName() {
-        return this.uFullName;
+    public String Usuario.getFullName() {
+        return this.fullName;
     }
     
-    public void Usuario.setUFullName(String uFullName) {
-        this.uFullName = uFullName;
+    public void Usuario.setFullName(String fullName) {
+        this.fullName = fullName;
     }
     
-    public String Usuario.getUEmail() {
-        return this.uEmail;
+    public String Usuario.getEmail() {
+        return this.email;
     }
     
-    public void Usuario.setUEmail(String uEmail) {
-        this.uEmail = uEmail;
+    public void Usuario.setEmail(String email) {
+        this.email = email;
     }
     
-    public String Usuario.getUUsername() {
-        return this.uUsername;
+    public String Usuario.getUsername() {
+        return this.username;
     }
     
-    public void Usuario.setUUsername(String uUsername) {
-        this.uUsername = uUsername;
+    public void Usuario.setUsername(String username) {
+        this.username = username;
     }
     
-    public String Usuario.getUPassword() {
-        return this.uPassword;
+    public String Usuario.getPassword() {
+        return this.password;
     }
     
-    public void Usuario.setUPassword(String uPassword) {
-        this.uPassword = uPassword;
+    public void Usuario.setPassword(String password) {
+        this.password = password;
     }
     
-    public Date Usuario.getUDateRegistration() {
-        return this.uDateRegistration;
+    public Date Usuario.getDateRegistration() {
+        return this.dateRegistration;
     }
     
-    public void Usuario.setUDateRegistration(Date uDateRegistration) {
-        this.uDateRegistration = uDateRegistration;
+    public void Usuario.setDateRegistration(Date dateRegistration) {
+        this.dateRegistration = dateRegistration;
     }
     
-    public Set<Booking> Usuario.getUBookings() {
-        return this.uBookings;
+    public Boolean Usuario.getEnabled() {
+        return this.enabled;
     }
     
-    public void Usuario.setUBookings(Set<Booking> uBookings) {
-        this.uBookings = uBookings;
+    public void Usuario.setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
     
-    public Boolean Usuario.getUEnabled() {
-        return this.uEnabled;
+    public Set<UserRole> Usuario.getRoles() {
+        return this.roles;
     }
     
-    public void Usuario.setUEnabled(Boolean uEnabled) {
-        this.uEnabled = uEnabled;
-    }
-    
-    public Set<UserRole> Usuario.getURoles() {
-        return this.uRoles;
-    }
-    
-    public void Usuario.setURoles(Set<UserRole> uRoles) {
-        this.uRoles = uRoles;
+    public void Usuario.setRoles(Set<UserRole> roles) {
+        this.roles = roles;
     }
     
 }
